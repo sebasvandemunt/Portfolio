@@ -62,12 +62,19 @@ header {
 /* Image on the left */
 .image {
     grid-column: span 1; /* Span one column */
+    height: 400px;
+    width: 400px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
 }
 
 /* Content Block 1 (Anchored to the right) */
 .content-block-1 {
     grid-column: span 1; /* Span one column */
-    margin-left: -20px; /* Overlap a bit to the left */
+    margin-left: 0px; /* Overlap a bit to the left */
+    margin-right: 0px; /* Overlap a bit to the right */
+    margin-top: 250px;
+    margin-bottom: 150px;
     padding: 20px; /* Add padding for spacing */
     background-color: #f0f0f0;
     border: 1px solid #ddd;
@@ -84,35 +91,94 @@ footer {
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
+    /* Larger Screens Styles */
+
     .container {
         grid-template-columns: 1fr 1fr; /* Two columns layout for larger screens */
     }
+
     .image {
         grid-column: span 1; /* Span one column */
     }
+
     .content-block-1 {
         grid-column: span 1; /* Span one column */
-        margin-left: 0; /* Remove the negative margin for larger screens */
+        margin-left: -200px; /* Remove the negative margin for larger screens */
+        margin-right: 100px;
         height: auto; /* Adjust height to auto for larger screens */
     }
+
     .section:nth-child(3) {
         grid-column: span 2; /* Span two columns for content block 2 on larger screens */
     }
+
     .section:nth-child(4) {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
     }
+
     .section h2 {
         text-align: left; /* Align headers to the left */
         border-left: 4px solid #333; /* Add left border for headers */
         padding-left: 10px; /* Add some left padding for headers */
     }
+
     .image-container {
         display: flex;
         justify-content: space-between; /* Space evenly horizontally */
         align-items: center;
     }
+
     .image-container img {
         width: 30%; /* Adjust the width of individual images */
+        height: auto;
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Smaller Screens Styles */
+
+    .container {
+        grid-template-columns: 1fr; /* Reset to single column layout for smaller screens */
+    }
+
+    .image {
+        grid-column: span 1; /* Span one column */
+        height: auto; /* Allow the image to adjust its height */
+        position: sticky;
+        top: 0;
+        margin-bottom: 0px;
+        z-index: 1; /* Place the image above content block 1 */
+    }
+
+    .content-block-1 {
+        grid-column: span 1; /* Span one column */
+        margin: 0; /* Reset margins */
+        padding-right: 20px; /* Add padding for spacing */
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        height: auto; /* Allow the content block to adjust its height */
+        z-index: 2; /* Place the content block above the image */
+    }
+
+    .section:nth-child(3),
+    .section:nth-child(4) {
+        grid-column: span 1; /* Span one column for the third and fourth sections on smaller screens */
+    }
+
+    .section h2 {
+        text-align: left; /* Center-align headers for smaller screens */
+        border-left: none; /* Remove the left border for headers on smaller screens */
+        padding-left: 0; /* Remove left padding for headers on smaller screens */
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images vertically for smaller screens */
+        align-items: center; /* Center-align images for smaller screens */
+    }
+
+    .image-container img {
+        width: 100%; /* Adjust the width of individual images to fill the container */
         height: auto;
     }
 }
