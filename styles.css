@@ -6,6 +6,7 @@ body, h1, h2, p, ul, li {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #FFF9F3;
 }
 
 /* Header Styles */
@@ -15,7 +16,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 10px 0;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,18 +35,18 @@ header {
 }
 
 .nav li {
-    margin-left: 20px;
+    margin: 5px;
 }
 
 /* Style for the third and fourth buttons */
 .nav li:nth-child(3), .nav li:nth-child(4) {
-    margin-left: 0; /* Remove the margin for the third and fourth buttons */
-    margin-right: 20px; /* Add margin to separate the third and fourth buttons */
+    margin-left: 5px; /* Remove the margin for the third and fourth buttons */
+    margin-right: 0px; /* Add margin to separate the third and fourth buttons */
 }
 
 /* Main Content Styles */
 .container {
-    max-width: 1200px;
+    max-width: 75%; /* Set it to 100% to prevent content from exceeding screen width */
     margin: 0 auto;
     padding: 20px;
     display: grid;
@@ -55,9 +56,8 @@ header {
 
 .section {
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #9B7070;
     border: 1px solid #ddd;
-    margin-right: 50px;
 }
 
 /* Image on the left */
@@ -69,10 +69,10 @@ header {
     border: none; /* Remove border */
 }
 
-/* Adjust the position of .profile-photo to the right of the screen */
 .profile-photo {
-    max-width: 100%; /* Adjust the maximum width as needed */
-    margin-left: 50%;
+    max-width: 80%; /* Allow the image to resize based on screen width */
+    display: block; /* Center align the image */
+    margin: 0 auto; /* Center the image horizontally */
     height: auto; /* Allow the height to adjust proportionally */
 }
 
@@ -91,7 +91,7 @@ header {
     margin-top: 250px;
     margin-bottom: 150px;
     padding: 20px; /* Add padding for spacing */
-    background-color: #f0f0f0;
+    background-color: #9B7070;
     border: 1px solid #ddd;
     height: 400px; /* Adjust the height as needed */
 }
@@ -103,17 +103,18 @@ header {
     width: 100%; /* Set images to 100% width */
     height: auto; /* Allow height to adjust proportionally */
     display: block; /* Ensure images stack vertically */
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #7C5252;
     color: #fff;
     text-align: center;
     padding: 10px 0;
 }
+
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
@@ -129,6 +130,13 @@ footer {
         margin-left: 200px;
     }
 
+    .profile-photo {
+        max-width: 100%; /* Allow the image to resize based on screen width */
+        display: block; /* Center align the image */
+        margin-right: -50%;
+        height: auto; /* Allow the height to adjust proportionally */
+    }
+
     .content-block-1 {
         grid-column: span 1; /* Span one column */
         margin-left: -500px; /* Remove the negative margin for larger screens */
@@ -139,10 +147,12 @@ footer {
 
     .section:nth-child(3) {
         grid-column: span 2; /* Span two columns for content block 2 on larger screens */
+        margin-bottom: 100px;
     }
 
     .section:nth-child(4) {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
+        margin-bottom: 100px;
     }
 
     .section {
@@ -184,18 +194,17 @@ footer {
     }
 
     .content-block-1 {
-        margin: 0; /* Remove the margins */
         padding: 20px; /* Add padding for spacing */
-        background-color: #f0f0f0;
+        background-color: #9B7070;
         border: 1px solid #ddd;
         height: auto; /* Adjust height to auto for smaller screens */
         width: 75%; /* Ensure it takes full width */
         margin-top: -200px;
     }
 
-    .section {
-        margin-right: 50px;
-        margin-left: 0px;
+    .image-container img {
+        width: 97%; /* Adjust the width of individual images */
+        height: auto;
     }
 
     /* Adjust header navigation for smaller screens */
@@ -209,7 +218,7 @@ footer {
     }
 
     .nav li {
-        margin: 5px 0; /* Add vertical margin to navigation items */
+        margin: 5px; /* Add vertical margin to navigation items */
     }
 }
 
