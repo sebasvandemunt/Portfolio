@@ -10,8 +10,8 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: transparent; /* Transparent header */
+    color: #333;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -57,6 +57,7 @@ header {
     padding: 20px;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
+    margin-right: 50px;
 }
 
 /* Image on the left */
@@ -67,6 +68,20 @@ header {
     background-color: transparent; /* Remove background color */
     border: none; /* Remove border */
 }
+
+/* Adjust the position of .profile-photo to the right of the screen */
+.profile-photo {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin-left: 50%;
+    height: auto; /* Allow the height to adjust proportionally */
+}
+
+/* Add a new class for the right-side container */
+.right-container {
+    float: right; /* Float the container to the right */
+    margin-left: 20px; /* Add some left margin for separation */
+}
+
 
 /* Content Block 1 (Anchored to the right) */
 .content-block-1 {
@@ -80,6 +95,17 @@ header {
     border: 1px solid #ddd;
     height: 400px; /* Adjust the height as needed */
 }
+
+/* Add styles for Game1, Game2, and Game3 */
+.Game1,
+.Game2,
+.Game3 {
+    width: 100%; /* Set images to 100% width */
+    height: auto; /* Allow height to adjust proportionally */
+    display: block; /* Ensure images stack vertically */
+    padding: 10px 10px 10px 10px;
+}
+
 
 /* Footer Styles */
 footer {
@@ -99,13 +125,16 @@ footer {
 
     .image {
         grid-column: span 1; /* Span one column */
+        margin-right: 600px;
+        margin-left: 200px;
     }
 
     .content-block-1 {
         grid-column: span 1; /* Span one column */
-        margin-left: -200px; /* Remove the negative margin for larger screens */
-        margin-right: 100px;
+        margin-left: -500px; /* Remove the negative margin for larger screens */
+        margin-right: 500px;
         height: auto; /* Adjust height to auto for larger screens */
+        width: 400px;
     }
 
     .section:nth-child(3) {
@@ -114,6 +143,10 @@ footer {
 
     .section:nth-child(4) {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
+    }
+
+    .section {
+        margin-right: 0px;
     }
 
     .section h2 {
@@ -139,46 +172,46 @@ footer {
     /* Smaller Screens Styles */
 
     .container {
-        grid-template-columns: 1fr; /* Reset to single column layout for smaller screens */
+        flex-direction: column-reverse; /* Reverse the order for smaller screens */
     }
 
-    .image {
-        grid-column: span 1; /* Span one column */
-        height: auto; /* Allow the image to adjust its height */
-        position: sticky;
-        top: 0;
-        margin-bottom: 0px;
-        z-index: 1; /* Place the image above content block 1 */
+    .profile-photo {
+        max-width: 90%; /* Adjust the maximum width as needed */
+        height: auto; /* Allow the height to adjust proportionally */
+        /* margin: 0 auto 100px; /* Center the photo and add margin for separation */
+        float: none; /* Remove the float */
+        margin-left: 100px;
     }
 
     .content-block-1 {
-        grid-column: span 1; /* Span one column */
-        margin: 0; /* Reset margins */
-        padding-right: 20px; /* Add padding for spacing */
+        margin: 0; /* Remove the margins */
+        padding: 20px; /* Add padding for spacing */
         background-color: #f0f0f0;
         border: 1px solid #ddd;
-        height: auto; /* Allow the content block to adjust its height */
-        z-index: 2; /* Place the content block above the image */
+        height: auto; /* Adjust height to auto for smaller screens */
+        width: 75%; /* Ensure it takes full width */
+        margin-top: -200px;
     }
 
-    .section:nth-child(3),
-    .section:nth-child(4) {
-        grid-column: span 1; /* Span one column for the third and fourth sections on smaller screens */
+    .section {
+        margin-right: 50px;
+        margin-left: 0px;
     }
 
-    .section h2 {
-        text-align: left; /* Center-align headers for smaller screens */
-        border-left: none; /* Remove the left border for headers on smaller screens */
-        padding-left: 0; /* Remove left padding for headers on smaller screens */
+    /* Adjust header navigation for smaller screens */
+    header {
+        flex-direction: column; /* Stack navigation items vertically */
+        text-align: center; /* Center align text */
     }
 
-    .image-container {
-        flex-direction: column; /* Stack images vertically for smaller screens */
-        align-items: center; /* Center-align images for smaller screens */
+    .nav {
+        margin-top: 10px; /* Add margin to separate navigation from logo */
     }
 
-    .image-container img {
-        width: 100%; /* Adjust the width of individual images to fill the container */
-        height: auto;
+    .nav li {
+        margin: 5px 0; /* Add vertical margin to navigation items */
     }
 }
+
+
+
