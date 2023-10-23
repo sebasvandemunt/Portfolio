@@ -20,6 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
 }
 
 .logo {
@@ -46,7 +47,7 @@ header {
 
 /* Main Content Styles */
 .container {
-    max-width: 75%; /* Set it to 100% to prevent content from exceeding screen width */
+    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
     margin: 0 auto;
     padding: 20px;
     display: grid;
@@ -70,25 +71,18 @@ header {
 }
 
 .profile-photo {
-    max-width: 80%; /* Allow the image to resize based on screen width */
+    max-width: 100%; /* Allow the image to resize based on screen width */
     display: block; /* Center align the image */
     margin: 0 auto; /* Center the image horizontally */
     height: auto; /* Allow the height to adjust proportionally */
 }
-
-/* Add a new class for the right-side container */
-.right-container {
-    float: right; /* Float the container to the right */
-    margin-left: 20px; /* Add some left margin for separation */
-}
-
 
 /* Content Block 1 (Anchored to the right) */
 .content-block-1 {
     grid-column: span 1; /* Span one column */
     margin-left: 0px; /* Overlap a bit to the left */
     margin-right: 0px; /* Overlap a bit to the right */
-    margin-top: 250px;
+    margin-top: -250px;
     margin-bottom: 150px;
     padding: 20px; /* Add padding for spacing */
     background-color: #9B7070;
@@ -100,12 +94,11 @@ header {
 .Game1,
 .Game2,
 .Game3 {
-    width: 100%; /* Set images to 100% width */
+    width: 95%; /* Set images to 100% width */
     height: auto; /* Allow height to adjust proportionally */
     display: block; /* Ensure images stack vertically */
     padding: 10px;
 }
-
 
 /* Footer Styles */
 footer {
@@ -113,50 +106,52 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
 }
 
-
-/* Media query for larger screens */
 @media screen and (min-width: 768px) {
     /* Larger Screens Styles */
 
     .container {
+        max-width: 80%; /* Ensure the container takes the full width of the screen */
         grid-template-columns: 1fr 1fr; /* Two columns layout for larger screens */
+        margin: 0 auto;
+    }
+
+    .content-block-1 {
+        grid-column: 1; /* Position content-block-1 on the left (first column) */
     }
 
     .image {
-        grid-column: span 1; /* Span one column */
-        margin-right: 600px;
-        margin-left: 200px;
+        grid-column: 2; /* Position the image on the right (second column) */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section.image {
+        margin-top: 150px;
+        width: auto;
     }
 
     .profile-photo {
         max-width: 100%; /* Allow the image to resize based on screen width */
+        width: auto;
         display: block; /* Center align the image */
-        margin-right: -50%;
         height: auto; /* Allow the height to adjust proportionally */
-    }
-
-    .content-block-1 {
-        grid-column: span 1; /* Span one column */
-        margin-left: -500px; /* Remove the negative margin for larger screens */
-        margin-right: 500px;
-        height: auto; /* Adjust height to auto for larger screens */
-        width: 400px;
     }
 
     .section:nth-child(3) {
         grid-column: span 2; /* Span two columns for content block 2 on larger screens */
-        margin-bottom: 100px;
     }
 
     .section:nth-child(4) {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
-        margin-bottom: 100px;
     }
 
     .section {
-        margin-right: 0px;
+        border: 1px solid #ddd; /* Add a border to each section for separation */
+        padding: 20px;
     }
 
     .section h2 {
@@ -167,43 +162,56 @@ footer {
 
     .image-container {
         display: flex;
-        justify-content: space-between; /* Space evenly horizontally */
+        justify-content: space-between;
         align-items: center;
+        overflow-x: auto; /* Add horizontal scrolling if content overflows */
     }
 
     .image-container img {
-        width: 30%; /* Adjust the width of individual images */
+        max-width: 30%; /* Set images to fit within the container width */
         height: auto;
     }
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 767px) {
     /* Smaller Screens Styles */
 
     .container {
-        flex-direction: column-reverse; /* Reverse the order for smaller screens */
-    }
-
-    .profile-photo {
-        max-width: 90%; /* Adjust the maximum width as needed */
-        height: auto; /* Allow the height to adjust proportionally */
-        /* margin: 0 auto 100px; /* Center the photo and add margin for separation */
-        float: none; /* Remove the float */
-        margin-left: 100px;
+        grid-template-columns: 1fr; /* Revert to single column layout for smaller screens */
+        margin: 0 auto;
+        max-width: 100%;
     }
 
     .content-block-1 {
-        padding: 20px; /* Add padding for spacing */
-        background-color: #9B7070;
-        border: 1px solid #ddd;
-        height: auto; /* Adjust height to auto for smaller screens */
-        width: 75%; /* Ensure it takes full width */
-        margin-top: -200px;
+        grid-column: 1; /* Position content-block-1 on the left (first column) */
+        margin-top: -150px;
+        margin-bottom: 25px;
+    }
+
+    .image {
+        grid-column: 1; /* Position the image on the left (first column) */
+    }
+
+    .section {
+        width: 90%; /* Set width to 100% for full-width sections */
+        max-width: 90%;
+    }
+
+    .section.image {
+        width: auto; /* Set width to 100% for the image section */
+        margin-top: 50px;
+    }
+
+    .profile-photo {
+        max-width: 80%; /* Allow the image to resize based on screen width */
+        display: block; /* Center align the image */
+        height: auto; /* Allow the height to adjust proportionally */
+        margin: 0 auto 20px; /* Center the photo and add some margin for separation */
+        float: none; /* Remove the float */
     }
 
     .image-container img {
-        width: 97%; /* Adjust the width of individual images */
+        max-width: 100%; /* Ensure images don't exceed their container width */
         height: auto;
     }
 
@@ -214,13 +222,10 @@ footer {
     }
 
     .nav {
-        margin-top: 10px; /* Add margin to separate navigation from logo */
+        margin-top: 10px; /* Add margin to separate navigation from the logo */
     }
 
     .nav li {
         margin: 5px; /* Add vertical margin to navigation items */
     }
 }
-
-
-
