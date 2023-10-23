@@ -84,7 +84,9 @@ header {
 .section {
     padding: 20px;
     background-color: #9B7070;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(221, 221, 221, 0.0); /* Adjust the alpha value for transparency */
+    border-radius: 20px;
+    margin-bottom: 10%;
 }
 
 /* Image on the left */
@@ -101,6 +103,25 @@ header {
     display: block; /* Center align the image */
     margin: 0 auto; /* Center the image horizontally */
     height: auto; /* Allow the height to adjust proportionally */
+}
+
+/* Create a class for the white background block */
+.heading-block {
+    display: inline-block;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    margin-top: 0px; /* Add a negative margin to move it up */
+}
+
+
+/* Style for the image within the heading block */
+.heading-image {
+    max-width: 50px; /* Adjust the image width as needed */
+    margin-right: 10px; /* Add spacing between the image and the heading text */
 }
 
 /* Content Block 1 (Anchored to the right) */
@@ -124,6 +145,7 @@ header {
     height: auto; /* Allow height to adjust proportionally */
     display: block; /* Ensure images stack vertically */
     padding: 10px;
+    border-radius: 20px;    
 }
 
 /* Pop-up Styles */
@@ -144,8 +166,9 @@ header {
 
 /* Center the popup content */
 .popup-content {
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: #9B7070;
+    border: 1px solid rgba(221, 221, 221, 0.0); /* Adjust the alpha value for transparency */
+    border-radius: 20px;    
     padding: 20px;
     position: fixed;
     top: 50%;
@@ -377,12 +400,6 @@ footer {
     .section {
         border: 1px solid #ddd; /* Add a border to each section for separation */
         padding: 20px;
-    }
-
-    .section h2 {
-        text-align: left; /* Align headers to the left */
-        border-left: 4px solid #333; /* Add left border for headers */
-        padding-left: 10px; /* Add some left padding for headers */
     }
 
     .image-container {
