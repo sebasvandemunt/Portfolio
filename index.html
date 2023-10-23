@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="popup.js"></script>
     <title>Sebas van de Munt | Portfolio</title>
 </head>
 
@@ -21,27 +22,27 @@
     </header>
 
 <div class="container">
-    <div class="section image">
+    <div class="section image hidden-content">
         <img src="Images/PortfolioFotoSebas.png" alt="Photo of Sebas van de Munt" class="profile-photo">
     </div>
-    <div class="section content-block-1 right-container">
+    <div class="section content-block-1 right-container hidden-content">
         <h2>Wie ben ik?</h2>
         <p>Content Block 1 Body Text</p>
     </div>
-    <div class="section">
+    <div class="section hidden-content">
         <h2>Video Game Projecten</h2>
         <div class="image-container">
-            <img src="Images/Game-01.png" alt="Image 1" class="Game1">
-            <img src="Images/Game-02.png" alt="Image 2" class="Game2">
-            <img src="Images/Game-03.png" alt="Image 3" class="Game3">
+            <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(1)">
+            <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(2)">
+            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(3)">
         </div>
     </div>
-    <div class="section">
+    <div class="section hidden-content">
         <h2>Digital Design Projecten</h2>
         <div class="image-container">
-            <img src="Images/Game-01.png" alt="Image 1" class="Game1">
-            <img src="Images/Game-02.png" alt="Image 2" class="Game2">
-            <img src="Images/Game-03.png" alt="Image 3" class="Game3">
+            <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(4)">
+            <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(5)">
+            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(6)">
         </div>
     </div>
 </div>
@@ -50,6 +51,147 @@
     <footer>
         &copy; Sebas van de Munt | Portfolio
     </footer>
+
+    <!-- Popup 1 -->
+    <div class="popup" id="popup1" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(1)"></div>
+            <span class="close" onclick="closePopup(1)">&times;</span>
+            <h3>Edit this header text for Pop-up 1</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 1. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Popup 2 -->
+    <div class="popup" id="popup2" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(2)"></div>
+            <span class="close" onclick="closePopup(2)">&times;</span>
+            <h3>Edit this header text for Pop-up 2</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 2. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Popup 3 -->
+    <div class="popup" id="popup3" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(3)"></div>
+            <span class="close" onclick="closePopup(3)">&times;</span>
+            <h3>Edit this header text for Pop-up 3</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 3. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Popup 4 -->
+    <div class="popup" id="popup4" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(4)"></div>
+            <span class="close" onclick="closePopup(4)">&times;</span>
+            <h3>Edit this header text for Pop-up 4</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 4. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Popup 5 -->
+    <div class="popup" id="popup5" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(5)"></div>
+            <span class="close" onclick="closePopup(5)">&times;</span>
+            <h3>Edit this header text for Pop-up 5</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 5. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Popup 6 -->
+    <div class="popup" id="popup6" style="display: none;">
+        <div class="popup-content">
+            <div class="overlay" onclick="closePopup(6)"></div>
+            <span class="close" onclick="closePopup(6)">&times;</span>
+            <h3>Edit this header text for Pop-up 6</h3>
+            <div class="header-text">
+                <p>Edit this text for Pop-up 6. You can add your own content here.</p>
+            </div>
+            <div class="text-and-video">
+                <div class="left-column">
+                    <p>Left side text goes here.</p>
+                </div>
+                <div class="right-column">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="additional-text">
+                <p>Additional text section goes here. You can add more content below the video and text.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
 
 </body>
 </html>
