@@ -10,56 +10,101 @@
 
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="#"><img src="your-logo.png" alt="Your Logo"></a>
-        </div>
-        <ul class="nav">
-            <li><a href="#">Video Games</a></li>
-            <li><a href="#">Digital Design</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </header>
+<header>
+    <div class="logo first-header-block">
+            <a href="#" class="first-header-block-content">
+                <div class="logo-image">
+                    <img src="Images/Icon-12.png" alt=".." class="logo-image">
+                </div>
+                <h1>Sebas van de Munt</h1>
+            </a>
+    </div>
+    <ul class="nav">
+        <li class="header-block">
+            <a href="#">
+                <img src="Images/Icon-13.png" alt=".." class="nav-icon">
+                Video Games
+            </a>
+        </li>
+        <li class="header-block">
+            <a href="#">
+                <img src="Images/Icon-14.png" alt=".." class="nav-icon">
+                Digital Design
+            </a>
+        </li>
+        <li class="header-block">
+            <a href="#">
+                <img src="Images/Icon-15.png" alt=".." class="nav-icon">
+                Contact
+            </a>
+        </li>
+    </ul>
+</header>
+
+
 
 <div class="container">
     <div class="section image hidden-content">
         <img src="Images/PortfolioFotoSebas.png" alt="Photo of Sebas van de Munt" class="profile-photo">
     </div>
     <div class="section content-block-1 right-container hidden-content">
-    <h2>
+    <h2 class="move-up">
         <div class="heading-block">
-            <img src="your-image.png" alt=".." class="heading-image">
+            <img src="Images/Icon-08.png" alt=".." class="heading-image">
             Wie Ben Ik?
         </div>
     </h2>        
         <p>Content Block 1 Body Text</p>
     </div>
+
     <div class="section hidden-content">
-    <h2>
+    <h2 class="move-up">
         <div class="heading-block">
-            <img src="your-image.png" alt=".." class="heading-image">
+            <img src="Images/Icon-09.png" alt=".." class="heading-image">
             Video Game Projecten
         </div>
     </h2>
+
     <div class="image-container">
+        <div class="image-wrapper">
             <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(1)">
+            <h4 class="image-caption">Bearing the Hammer</h4>
+        </div>
+        <div class="image-wrapper">
             <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(2)">
+            <h4 class="image-caption">A Minor Ghost Miner</h4>
+        </div>
+        <div class="image-wrapper">
             <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(3)">
+            <h4 class="image-caption">Froggy Focus</h4>
+        </div>
         </div>
     </div>
+
     <div class="section hidden-content">
-    <h2>
+    <h2 class="move-up">
         <div class="heading-block">
-            <img src="your-image.png" alt=".." class="heading-image">
+            <img src="Images/Icon-10.png" alt=".." class="heading-image">
             Digital Design Projecten
         </div>
     </h2>
+
     <div class="image-container">
-            <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(4)">
-            <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(5)">
-            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(6)">
+        <div class="image-wrapper">
+            <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(1)">
+            <h4 class="image-caption">Caption 1</h4>
+        </div>
+        <div class="image-wrapper">
+            <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(2)">
+            <h4 class="image-caption">Caption 2</h4>
+        </div>
+        <div class="image-wrapper">
+            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(3)">
+            <h4 class="image-caption">Caption 3</h4>
+        </div>
         </div>
     </div>
+
 </div>
 
 
@@ -72,7 +117,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(1)"></div>
             <span class="close" onclick="closePopup(1)">&times;</span>
-            <h3>Edit this header text for Pop-up 1</h3>
+            <div class = "move-up">
+                <div class="heading-block">
+                    <h3>Edit this header text for Pop-up 1</h3>
+                </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 1. You can add your own content here.</p>
             </div>
@@ -96,7 +145,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(2)"></div>
             <span class="close" onclick="closePopup(2)">&times;</span>
-            <h3>Edit this header text for Pop-up 2</h3>
+            <div class="move-up">
+                <div class="heading-block">
+                    <h3>Edit this header text for Pop-up 2</h3>
+                </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 2. You can add your own content here.</p>
             </div>
@@ -119,7 +172,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(3)"></div>
             <span class="close" onclick="closePopup(3)">&times;</span>
-            <h3>Edit this header text for Pop-up 3</h3>
+            <div class="move-up">
+            <div class="heading-block">
+                <h3>Edit this header text for Pop-up 3</h3>
+            </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 3. You can add your own content here.</p>
             </div>
@@ -142,7 +199,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(4)"></div>
             <span class="close" onclick="closePopup(4)">&times;</span>
-            <h3>Edit this header text for Pop-up 4</h3>
+            <div class="move-up">
+            <div class="heading-block">
+                <h3>Edit this header text for Pop-up 4</h3>
+            </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 4. You can add your own content here.</p>
             </div>
@@ -165,7 +226,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(5)"></div>
             <span class="close" onclick="closePopup(5)">&times;</span>
-            <h3>Edit this header text for Pop-up 5</h3>
+            <div class="move-up">
+            <div class="heading-block">
+                <h3>Edit this header text for Pop-up 5</h3>
+            </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 5. You can add your own content here.</p>
             </div>
@@ -188,7 +253,11 @@
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(6)"></div>
             <span class="close" onclick="closePopup(6)">&times;</span>
-            <h3>Edit this header text for Pop-up 6</h3>
+            <div class="move-up">
+            <div class="heading-block">
+                <h3>Edit this header text for Pop-up 6</h3>
+            </div>
+            </div>
             <div class="header-text">
                 <p>Edit this text for Pop-up 6. You can add your own content here.</p>
             </div>
