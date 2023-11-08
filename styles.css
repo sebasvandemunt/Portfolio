@@ -12,6 +12,13 @@
     font-weight: bold;
 }
 
+/* Font-Face for Patrick Hand SC (bold) */
+@font-face {
+    font-family: 'Pangolin';
+    src: url('fonts/Pangolin-Regular.ttf') format('truetype');
+    font-weight: bold;
+}
+
 
 /* Reset some default styles */
 body, h1, h2, p, ul, li {
@@ -21,12 +28,12 @@ body, h1, h2, p, ul, li {
 
 /* Headers with Patrick Hand SC in bold */
 h2, h3, h4, h5, h6 {
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Pangolin', cursive;
     font-size: 24px;
 }
 
 h1 {
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 h1, h2, h3 {
