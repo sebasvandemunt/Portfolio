@@ -46,8 +46,8 @@ function closePopup(popupId) {
     // Remove the class for sliding in
     popup.classList.remove('slideFromBottom');
 
-    // Wait for the sliding animation to complete
-    popup.addEventListener('animationend', function () {
+    // Add a one-time animationend event listener
+    var animationEndHandler = function () {
         // Hide the popup
         popup.style.display = 'none';
 
@@ -62,8 +62,15 @@ function closePopup(popupId) {
         for (var i = 0; i < websiteContent.length; i++) {
             websiteContent[i].classList.remove('fadeContent');
         }
-    });
+
+        // Remove the event listener to prevent it from firing again
+        popup.removeEventListener('animationend', animationEndHandler);
+    };
+
+    // Add the animationend event listener
+    popup.addEventListener('animationend', animationEndHandler);
 }
+
 
 
 // Use window.onload to ensure the content is loaded before applying animations
