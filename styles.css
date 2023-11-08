@@ -30,7 +30,7 @@ h1 {
 }
 
 h1, h2, h3 {
-    color: #FFF;
+    color: #FFF9F3;
 }
 
 /* Normal text with Patrick Hand */
@@ -71,29 +71,22 @@ header {
     display: flex;
     align-items: center;
     color: #7C5252;
-    max-width: 25%;
-    width: 25%;
-}
-
-.logo-image {
-    max-width: 25%;
-    padding-right: 10%;
-}
-
-.logo-image img {
-    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    border: 2.5px solid #333333; /* Adjust the alpha value for transparency */
 }
 
 .nav {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: flex-end; /* Align navigation buttons to the right */
+    margin-top: 10px; /* Add margin to separate navigation from the top of the header */
 }
 
+
 .nav li {
-    margin: 5px;
-    margin-top: -50px;
+    margin: 0 10px; /* Add margin to the right of each navigation item */
 }
+
 
 /* Style for the third and fourth buttons */
 .nav li:nth-child(3), .nav li:nth-child(4) {
@@ -121,20 +114,33 @@ header {
 }
 
 .container .heading-block {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     background-color: #9B7070;
-    border-radius: 10px;
     padding: 10px;
-    width: auto;
-    position: relative; /* Add relative positioning to the heading-block */
-    z-index: 1; /* Ensure the heading-block appears above the container content */
+    max-width: fit-content; /* Set it to fit the content width */
+    position: relative;
+}
+
+.heading-text {
+    margin-right: 5px;
 }
 
 .section {
     padding: 20px;
     background-color: #9B7070;
-    border: 1px solid rgba(0.0, 0.0, 0.0, 0.0); /* Adjust the alpha value for transparency */
+    border-radius: 20px;
+    position: relative;
+}
+
+.section.content-block-1.right-container
+{
+    border: 2.5px solid #333333;
+    border-radius: 20px;
+}
+
+.section.hidden-content {
+    border: 2.5px solid #333333;
     border-radius: 20px;
 }
 
@@ -154,23 +160,40 @@ header {
     height: auto; /* Allow the height to adjust proportionally */
 }
 
-/* Create a class for the white background block */
+
+
 .heading-block {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     background-color: #9B7070;
-    border-radius: 10px;
+    border-top: 2.5px solid #333333;
+    border-left: 2.5px solid #333333;
+    border-right: 2.5px solid #333333;
+    border-radius: 20px;
     padding: 10px;
-    margin-bottom: 10px;
-    width: auto;
-    margin-top: 0px; /* Add a negative margin to move it up */
+    max-width: fit-content; /* Set it to fit the content width */
+    position: relative;
+}
+
+.heading-image {
+    max-width: 65px;
+    display: inline-block;
+    margin-right: 10px; /* Add some space between the image and text */
+}
+
+
+.move-up {
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Style for the header block */
 .header-block {
     display: inline-block;
     background-color: #F7E4E4; /* Replace 'your-color' with the desired background color */
-    border-radius: 10px; /* Adjust border radius as needed */
+    border: 1.5px solid #333333;
+    border-radius: 20px;
     padding: 10px;
     margin-bottom: 10px;
     width: auto;
@@ -193,10 +216,6 @@ header {
     align-items: center; /* Center elements vertically within the header block */
 }
 
-/* Style for the image within the heading block */
-.heading-image {
-    max-width: 65px; /* Adjust the image width as needed */
-}
 
 /* Content Block 1 (Anchored to the right) */
 .content-block-1 {
@@ -207,8 +226,9 @@ header {
     margin-bottom: 150px;
     padding: 20px; /* Add padding for spacing */
     background-color: #9B7070;
-    border: 1px solid rgba(221, 221, 221, 0.0);
-    height: 400px; /* Adjust the height as needed */
+    border: 2.5px solid #333333;
+    border-radius: 20px;
+    height: auto; /* Adjust the height as needed */
 }
 
 .Game1,
@@ -217,8 +237,11 @@ header {
     max-width: 100%; /* Set images to the maximum width of their container */
     height: auto; /* Allow height to adjust proportionally */
     display: block; /* Ensure images stack vertically */
-    padding: 10px;
+    padding: 0px;
+    margin: 10px;
     border-radius: 20px;
+    border: 2.5px solid #333333; /* Adjust the alpha value for transparency */
+
 }
 
 /* Pop-up Styles */
@@ -253,7 +276,7 @@ header {
 /* Ensure content within popups is left-aligned */
 .popup-content {
     background-color: #9B7070;
-    border: 1px solid rgba(221, 221, 221, 0.0);
+    border: 2.5px solid #333333; /* Adjust the alpha value for transparency */
     border-radius: 20px;
     padding: 20px;
     position: fixed;
@@ -385,6 +408,8 @@ footer {
     text-align: center;
     padding: 10px 0;
     max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
+    border-top: 2.5px solid #333333;
+
 }
 
 /* Animation for image section */
@@ -415,9 +440,10 @@ footer {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.move-up {
-    margin-top: -50px;
-}
+
+
+/* You can copy the rest of your existing CSS for h2 and heading-block styles below this section. */
+
 
 /* Animation for revealing content */
 .reveal-content {
@@ -483,17 +509,28 @@ footer {
 @media screen and (min-width: 768px) {
     /* Larger Screens Styles */
 
-        /* Center the logo and h1 title vertically within the header */
-    .logo.first-header-block {
-        margin-left: -50px;
-        margin-top: -50px;
-    }
-
     .first-header-block-content{
         margin-left: 50px;
         margin-top: 50px;
         padding-bottom: 10px;
         padding-right: 10px;
+    }
+
+        /* Center the logo and h1 title vertically within the header */
+    .logo.first-header-block {
+        max-width: 25%;
+        width: 25%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+
+    .logo-image {
+        max-width: 25%;
+        padding-right: 10%;
+    }
+
+    .logo-image img {
+        max-width: 100%; /* Ensure the image doesn't overflow its container */
     }
 
     h1 {
@@ -509,6 +546,12 @@ footer {
         grid-column: 1; /* Position content-block-1 on the left (first column) */
     }
 
+    .section.content-block-1.right-container
+{
+    margin-top: -300px;
+    margin-bottom: 300px;
+}
+
     .image {
         grid-column: 2; /* Position the image on the right (second column) */
         display: block;
@@ -517,7 +560,6 @@ footer {
     }
 
     .section.image {
-        margin-top: 50px;
         width: auto;
     }
 
@@ -567,17 +609,28 @@ footer {
 @media screen and (max-width: 767px) {
     /* Smaller Screens Styles */
 
-        /* Center the logo and h1 title vertically within the header */
-    .logo.first-header-block {
-        margin-left: -10px;
-        margin-top: -50px;
-    }
-
     .first-header-block-content{
         margin-left: 10px;
         margin-top: 50px;
         padding-bottom: 10px;
         padding-right: 10px;
+    }
+
+        /* Center the logo and h1 title vertically within the header */
+    .logo.first-header-block {
+        max-width: 50%;
+        width: 50%;
+        margin-left: -10px;
+        margin-top: -50px;
+    }
+
+    .logo-image {
+        max-width: 25%;
+        padding-right: 10%;
+    }
+
+    .logo-image img {
+        max-width: 100%; /* Ensure the image doesn't overflow its container */
     }
 
     h1 {
@@ -596,6 +649,12 @@ footer {
         margin-bottom: 25px;
     }
 
+    .section.content-block-1.right-container
+{
+    margin-top: -300px;
+    margin-bottom: 150px;
+}
+
     .image {
         grid-column: 1; /* Position the image on the left (first column) */
     }
@@ -604,7 +663,6 @@ footer {
         width: 90%; /* Set width to 100% for full-width sections */
         max-width: 90%;
         margin-bottom: 150px;
-        margin-left: 2.5%;
     }
 
     .section.image {
