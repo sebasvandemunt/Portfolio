@@ -14,32 +14,33 @@
 
 <header>
     <div class="logo first-header-block">
-            <a href="#" class="first-header-block-content">
-                <div class="logo-image">
-                    <img src="Images/Icon-25.png" alt=".." class="logo-image">
-                </div>
-                <h1>Sebas van de Munt</h1>
-            </a>
+        <a href="#" class="first-header-block-content" onmouseover="changeImage('Images/Icon-26.png')" onmouseout="restoreImage()" onclick="scrollToTop(event)">
+            <div class="logo-image">
+                <img src="Images/Icon-25.png" alt=".." class="logo-image" id="logoImage">
+            </div>
+            <h1>Sebas van de Munt</h1>
+        </a>
     </div>
+
     <ul class="nav">
-        <li class="header-block">
-            <a href="#">
-                <img src="Images/Icon-31.png" alt=".." class="nav-icon">
-                Video Games
-            </a>
-        </li>
-        <li class="header-block">
-            <a href="#">
-                <img src="Images/Icon-33.png" alt=".." class="nav-icon">
-                Digital Design
-            </a>
-        </li>
-        <li class="header-block">
-            <a href="#">
-                <img src="Images/Icon-35.png" alt=".." class="nav-icon">
-                Contact
-            </a>
-        </li>
+    <li class="header-block" onmouseover="changeNavIcon(this, 'Images/Icon-32.png')" onmouseout="restoreNavIcon(this)">
+        <a href="#" onclick="scrollToSection('videoGamesSection', event)">
+            <img src="Images/Icon-31.png" alt=".." class="nav-icon" id="navIcon1">
+            Video Games
+        </a>
+    </li>
+    <li class="header-block" onmouseover="changeNavIcon(this, 'Images/Icon-34.png')" onmouseout="restoreNavIcon(this)">
+        <a href="#" onclick="scrollToSection('digitalDesignSection', event)">
+            <img src="Images/Icon-33.png" alt=".." class="nav-icon" id="navIcon2">
+            Digital Design
+        </a>
+    </li>
+    <li class="header-block" onmouseover="changeNavIcon(this, 'Images/Icon-36.png')" onmouseout="restoreNavIcon(this)">
+        <a href="#" onclick="scrollToSection('contactSection', event)">
+            <img src="Images/Icon-35.png" alt=".." class="nav-icon" id="navIcon3">
+            Contact
+        </a>
+    </li>
     </ul>
 </header>
 
@@ -49,15 +50,16 @@
     <div class="section image hidden-content">
         <img src="Images/PortfolioFotoSebas.png" alt="Photo of Sebas van de Munt" class="profile-photo">
     </div>
-    <div class="section content-block-1 right-container hidden-content">
-    <h2 class="move-up">
-        <div class="heading-block">
-            <div class="border-left"></div>
-            <img src="Images/Icon-29.png" alt=".." class="heading-image">
-        <div class="heading-text">Wie Ben Ik?</div>
-            <div class="border-right"></div>
-        </div>
-    </h2>        
+
+    <div class="section content-block-1 right-container hidden-content" onmouseover="changeHeadingImage(this, 'Images/Icon-30.png')" onmouseout="restoreHeadingImage(this)">
+        <h2 class="move-up">
+            <div class="heading-block">
+                <div class="border-left"></div>
+                <img src="Images/Icon-29.png" alt=".." class="heading-image" id="headingImage">
+                <div class="heading-text">Wie Ben Ik?</div>
+                <div class="border-right"></div>
+            </div>
+        </h2>
         <p>
             Gutentag!
             Ich heiBe BAF und ich liebe Kase Stengeln von Topking.
@@ -66,53 +68,72 @@
         </p>
     </div>
 
-    <div class="section hidden-content">
-    <h2 class="move-up">
-        <div class="heading-block">
-            <img src="Images/Icon-19.png" alt=".." class="heading-image">
-        <div class="heading-text">Video Game Projecten</div>
-        </div>
-    </h2>
+    <div id="videoGamesSection" class="section hidden-content" onmouseover="changeHeadingImage2(this, 'Images/Icon-20.png')" onmouseout="restoreHeadingImage2(this)">
+        <h2 class="move-up">
+            <div class="heading-block">
+                <img src="Images/Icon-19.png" alt=".." class="heading-image" id="gameHeadingImage">
+                <div class="heading-text">Video Game Projecten</div>
+            </div>
+        </h2>
 
-    <div class="image-container">
-        <div class="image-wrapper">
-            <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(1)">
-            <h4 class="image-caption">Bearing the Hammer</h4>
-        </div>
-        <div class="image-wrapper">
-            <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(2)">
-            <h4 class="image-caption">A Minor Ghost Miner</h4>
-        </div>
-        <div class="image-wrapper">
-            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(3)">
-            <h4 class="image-caption">Froggy Focus</h4>
-        </div>
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="Images/Game-01.png" alt="Image 1" class="Game1" onclick="openPopup(1)">
+                <h4 class="image-caption">Bearing the Hammer</h4>
+            </div>
+            <div class="image-wrapper">
+                <img src="Images/Game-02.png" alt="Image 2" class="Game2" onclick="openPopup(2)">
+                <h4 class="image-caption">A Minor Ghost Miner</h4>
+            </div>
+            <div class="image-wrapper">
+                <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(3)">
+                <h4 class="image-caption">Froggy Focus</h4>
+            </div>
         </div>
     </div>
 
-    <div class="section hidden-content">
-    <h2 class="move-up">
-        <div class="heading-block">
-            <img src="Images/Icon-21.png" alt=".." class="heading-image">
-        <div class="heading-text">Digital Design Projecten</div>
-        </div>
-    </h2>
 
-    <div class="image-container">
-        <div class="image-wrapper">
-            <img src="Images/Project-37.png" alt="Image 4" class="Project1" onclick="openPopup(4)">
-            <h4 class="image-caption">NDSM Treehouse</h4>
-        </div>
-        <div class="image-wrapper">
-            <img src="Images/Project-38.png" alt="Image 5" class="Project2" onclick="openPopup(5)">
-            <h4 class="image-caption">8-BIT Streamlounge</h4>
-        </div>
-        <div class="image-wrapper">
-            <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(6)">
-            <h4 class="image-caption">Pili.nl</h4>
-        </div>
+    <div id="digitalDesignSection" class="section hidden-content" onmouseover="changeHeadingImage3(this, 'Images/Icon-22.png')" onmouseout="restoreHeadingImage3(this)">
+        <h2 class="move-up">
+            <div class="heading-block">
+                <img src="Images/Icon-21.png" alt=".." class="heading-image" id="designHeadingImage">
+                <div class="heading-text">Digital Design Projecten</div>
+            </div>
+        </h2>
+
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="Images/Project-37.png" alt="Image 4" class="Project1" onclick="openPopup(4)">
+                <h4 class="image-caption">NDSM Treehouse</h4>
+            </div>
+            <div class="image-wrapper">
+                <img src="Images/Project-38.png" alt="Image 5" class="Project2" onclick="openPopup(5)">
+                <h4 class="image-caption">8-BIT Streamlounge</h4>
+            </div>
+            <div class="image-wrapper">
+                <img src="Images/Game-03.png" alt="Image 3" class="Game3" onclick="openPopup(6)">
+                <h4 class="image-caption">Pili.nl</h4>
+            </div>
         </div>
     </div>
+
+        <div class="section image2 hidden-content">
+            <img src="Images/PortfolioFotoSebas2.png" alt="Photo of Sebas van de Munt" class="profile-photo2">
+        </div>
+
+        <div id="contactSection" class="section hidden-content" onmouseover="changeHeadingImage4(this, 'Images/Icon-24.png')" onmouseout="restoreHeadingImage4(this)">
+        <h2 class="move-up">
+            <div class="heading-block">
+                <img src="Images/Icon-23.png" alt=".." class="heading-image" id="contactHeadingImage">
+                <div class="heading-text">Contact</div>
+            </div>
+        </h2>
+
+        <div class="text-container">
+            <p> Contact info hier </p>
+        </div>
+    </div>
+
 
 </div>
 
@@ -125,8 +146,8 @@
     <div class="popup" id="popup1" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(1)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(1)">
-            <div class = "move-up">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton1" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 1)" onmouseout="restoreCloseButtonImage(1)" onclick="closePopup(1)">
+            <div class="move-up">
                 <div class="heading-block">
                     <h3>Bearing the Hammer</h3>
                 </div>
@@ -153,7 +174,7 @@
     <div class="popup" id="popup2" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(2)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(2)">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton2" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 2)" onmouseout="restoreCloseButtonImage(2)" onclick="closePopup(2)">
             <div class="move-up">
                 <div class="heading-block">
                     <h3>A Minor Ghost Miner</h3>
@@ -180,7 +201,7 @@
     <div class="popup" id="popup3" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(3)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(3)">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton3" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 3)" onmouseout="restoreCloseButtonImage(3)" onclick="closePopup(3)">
             <div class="move-up">
             <div class="heading-block">
                 <h3>Froggy Focus</h3>
@@ -207,7 +228,7 @@
     <div class="popup" id="popup4" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(4)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(4)">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton4" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 4)" onmouseout="restoreCloseButtonImage(4)" onclick="closePopup(4)">
             <div class="move-up">
             <div class="heading-block">
                 <h3>NDSM Treehouse Project</h3>
@@ -234,7 +255,7 @@
     <div class="popup" id="popup5" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(5)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(5)">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton5" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 5)" onmouseout="restoreCloseButtonImage(5)" onclick="closePopup(5)">
             <div class="move-up">
             <div class="heading-block">
                 <h3>8-BIT Streamlounge</h3>
@@ -261,7 +282,7 @@
     <div class="popup" id="popup6" style="display: none;">
         <div class="popup-content">
             <div class="overlay" onclick="closePopup(6)"></div>
-            <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" onclick="closePopup(6)">
+                <img src="Images/Icon-27.png" alt="Close" class="custom-close-button" id="closeButton6" onmouseover="changeCloseButtonImage('Images/Icon-28.png', 6)" onmouseout="restoreCloseButtonImage(6)" onclick="closePopup(6)">
             <div class="move-up">
             <div class="heading-block">
                 <h3>Pili.nl</h3>

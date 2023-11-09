@@ -89,3 +89,112 @@ window.onload = function () {
         contentBlock.classList.remove('hidden-content');
     }, 100); // Adjust the delay as needed
 }
+
+// JavaScript to change the image source on hover and restore on mouseout
+function changeImage(newSrc) {
+    var logoImage = document.getElementById("logoImage");
+    logoImage.src = newSrc;
+}
+
+function restoreImage() {
+    var logoImage = document.getElementById("logoImage");
+    logoImage.src = "Images/Icon-25.png";
+}
+
+// JavaScript to change the nav icon on hover and restore on mouseout
+function changeNavIcon(element, newSrc) {
+    var navIcon = element.querySelector('.nav-icon');
+    // Store the original source in a data attribute
+    if (!navIcon.dataset.originalSrc) {
+        navIcon.dataset.originalSrc = navIcon.src;
+    }
+    navIcon.src = newSrc;
+}
+
+function restoreNavIcon(element) {
+    var navIcon = element.querySelector('.nav-icon');
+    // Restore to the original source stored in the data attribute
+    navIcon.src = navIcon.dataset.originalSrc || "Images/Icon-31.png";
+}
+
+// JavaScript to change the heading image on hover and restore on mouseout
+function changeHeadingImage(element, newSrc) {
+    var headingImage = element.querySelector('.heading-image');
+    headingImage.src = newSrc;
+}
+
+function restoreHeadingImage(element) {
+    var headingImage = element.querySelector('.heading-image');
+    // Restore to the original source
+    headingImage.src = "Images/Icon-29.png";
+}
+
+// JavaScript to change the heading image on hover and restore on mouseout
+function changeHeadingImage2(element, newSrc) {
+    var headingImage = element.querySelector('.heading-image');
+    headingImage.src = newSrc;
+}
+
+function restoreHeadingImage2(element) {
+    var headingImage = element.querySelector('.heading-image');
+    // Restore to the original source
+    headingImage.src = "Images/Icon-19.png";
+}
+
+    // JavaScript to change the heading image on hover and restore on mouseout
+    function changeHeadingImage3(element, newSrc) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = newSrc;
+    }
+
+    function restoreHeadingImage3(element) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = "Images/Icon-21.png";
+    }
+
+    // JavaScript to change the heading image on hover and restore on mouseout
+    function changeHeadingImage4(element, newSrc) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = newSrc;
+    }
+
+    function restoreHeadingImage4(element) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = "Images/Icon-23.png";
+    }
+
+    // JavaScript to change the close button image in the popup on hover and restore on mouseout
+    function changeCloseButtonImage(newSrc, popupId) {
+        var closeButton = document.getElementById("closeButton" + popupId);
+        closeButton.src = newSrc;
+    }
+
+    function restoreCloseButtonImage(popupId) {
+        var closeButton = document.getElementById("closeButton" + popupId);
+        closeButton.src = "Images/Icon-27.png";
+    }
+
+function scrollToSection(sectionId, event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const offsetTop = section.getBoundingClientRect().top + window.scrollY;
+        
+        // Scroll to the target section with a custom offset
+        window.scrollTo({
+            top: offsetTop - 180, // Adjust the offset as needed
+            behavior: 'smooth',
+        });
+    }
+}
+
+function scrollToTop(event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+
+    // Scroll to the top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}

@@ -84,6 +84,11 @@ header {
     max-width: 100%;
 }
 
+/* Add a new style to hide the second image initially */
+.logo-image img.second-image {
+    display: none;
+}
+
 .nav {
     list-style: none;
     display: flex;
@@ -119,11 +124,11 @@ header {
     grid-gap: 20px;
     border: none; /* Remove border */
     position: relative;
+    align-items: center;
 }
 
 .container .heading-block {
     display: inline-flex;
-    align-items: center;
     background-color: #9B7070;
     padding: 10px;
     max-width: fit-content; /* Set it to fit the content width */
@@ -145,10 +150,16 @@ header {
 {
     border: 1.5px solid #333333;
     border-radius: 20px;
+
 }
 
 .section.hidden-content {
     border: 1.5px solid #333333;
+    border-radius: 20px;
+}
+
+.section.image2.hidden-content {
+    border: none;
     border-radius: 20px;
 }
 
@@ -161,13 +172,40 @@ header {
     border: none; /* Remove border */
 }
 
+
 .profile-photo {
     max-width: 100%; /* Allow the image to resize based on screen width */
     display: block; /* Center align the image */
     margin: 0 auto; /* Center the image horizontally */
     margin-top: -10%;
     height: auto; /* Allow the height to adjust proportionally */
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+
 }
+
+    .profile-photo:hover {
+        transform: rotate(-2deg); /* Rotate the image by 3 degrees on hover */
+    }
+
+    .image2 {
+    grid-column: span 1; /* Span one column */
+    height: 400px;
+    width: 400px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    }
+
+    .profile-photo2 {
+    max-width: 100%; /* Allow the image to resize based on screen width */
+    display: block; /* Center align the image */
+    margin: 0 auto; /* Center the image horizontally */
+    height: auto; /* Allow the height to adjust proportionally */
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+    }
+
+    .profile-photo2:hover {
+        transform: rotate(2deg); /* Rotate the image by 3 degrees on hover */
+    }
 
 
 .heading-block {
@@ -226,6 +264,12 @@ header {
     margin-bottom: 10px;
     width: auto;
     margin-top: 0px;
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+
+}
+
+.header-block:hover {
+    transform: scale(1.025); /* Zoom in effect on hover */
 }
 
 .first-header-block {
@@ -236,6 +280,12 @@ header {
     margin-bottom: 0px;
     width: auto;
     margin-top: 0px;
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+
+}
+
+.first-header-block:hover {
+    transform: scale(1.025); /* Zoom in effect on hover */
 }
 
 /* Style the header block */
@@ -244,8 +294,13 @@ header {
     align-items: center; /* Center elements vertically within the header block */
     justify-content: center;
     max-width: 100%;
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+
 }
 
+.first-header-block-content:hover {
+    transform: scale(1.04); /* Zoom in effect on hover */
+}
 
 /* Content Block 1 (Anchored to the right) */
 .content-block-1 {
@@ -266,16 +321,25 @@ header {
 .Game3,
 .Project1,
 .Project2 {
-    max-width: 100%; /* Set images to the maximum width of their container */
-    height: auto; /* Allow height to adjust proportionally */
-    display: block; /* Ensure images stack vertically */
+    max-width: 100%;
+    height: auto;
+    display: block;
     padding: 0px;
     margin: 10px;
     border-radius: 20px;
-    border: 1.5px solid #333333; /* Adjust the alpha value for transparency */
+    border: 1.5px solid #333333;
     cursor: pointer;
-
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
 }
+
+.Game1:hover,
+.Game2:hover,
+.Game3:hover,
+.Project1:hover,
+.Project2:hover {
+    transform: scale(1.025); /* Zoom in effect on hover */
+}
+
 
 /* Pop-up Styles */
 .popup {
@@ -288,9 +352,10 @@ header {
     background-color: rgba(0, 0, 0, 0.0);
     z-index: 999;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    overflow: auto; /* Add overflow to enable scrolling if needed */
 }
 
 
@@ -314,14 +379,16 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 80%;
+    width: 90%; /* Adjust width percentage to fit within the screen */
+    max-width: 80%; /* Set a max-width if needed */
+    max-height: 75%;
+    margin-top: 10px;
     z-index: 998;
     text-align: left;
-    display: flex; /* Display the content as a flex container */
-    flex-direction: column; /* Stack the child elements vertically */
-    justify-content: flex-start; /* Align child elements to the top */
-    align-items: stretch; /* Stretch child elements to fill the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 
@@ -371,10 +438,9 @@ footer {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 35px; /* Set the width of the custom close button */
-    height: 35px; /* Set the height of the custom close button */
     cursor: pointer;
     z-index: 999; /* Adjust z-index if needed */
+    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
 
     /* Add any other styling you want for the custom close button, e.g., background image or color */
 }
@@ -382,6 +448,7 @@ footer {
 /* You can add hover effects, etc., as needed for the close button */
 .custom-close-button:hover {
     /* Add hover styles here */
+        transform: scale(1.025); /* Zoom in effect on hover */
 }
 
 .text-and-video {
@@ -492,6 +559,16 @@ footer {
 
 /* Animation for the second section */
 .section:nth-child(4) {
+    animation: slideFromBottom 1s ease-in-out 2s forwards;
+}
+
+/* Animation for the second section */
+.section:nth-child(5) {
+    animation: slideFromBottom 1s ease-in-out 2s forwards;
+}
+
+/* Animation for the second section */
+.section:nth-child(6) {
     animation: slideFromBottom 1s ease-in-out 2s forwards;
 }
 
@@ -664,6 +741,14 @@ footer {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
     }
 
+        .section:nth-child(5) {
+        grid-column: span 1; /* Span two columns for content block 3 on larger screens */
+    }
+
+    .section:nth-child(6) {
+        grid-column: span 1; /* Span two columns for content block 3 on larger screens */
+    }
+
     .section {
         border: 1px solid  rgba(0.0, 0.0, 0.0, 0.0); /* Add a border to each section for separation */
         padding: 20px;
@@ -689,6 +774,15 @@ footer {
 
     .image-wrapper:hover .image-caption {
     opacity: 1;
+    }
+
+    .custom-close-button {
+    width: 45px; /* Set the width of the custom close button */
+    height: 45px; /* Set the height of the custom close button */
+    }
+
+    .profile-photo2 {
+    margin-top: -50%;
     }
 }
 
@@ -738,7 +832,7 @@ footer {
 
             /* Normal text with Patrick Hand */
     body, p, ul, li, footer {
-        font-size: 18px;
+        font-size: 16px;
     }
 
         /* Normal text with Patrick Hand */
@@ -811,5 +905,14 @@ footer {
 
     .image-wrapper:hover .image-caption {
         opacity: 1; /* Ensure the caption is always visible on hover */
+    }
+
+    .custom-close-button {
+        width: 35px; /* Set the width of the custom close button */
+        height: 35px; /* Set the height of the custom close button */
+    }
+
+    .profile-photo2 {
+        margin-top: 0%;
     }
 }
