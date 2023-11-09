@@ -743,10 +743,14 @@ footer {
 
     .section:nth-child(3) {
         grid-column: span 2; /* Span two columns for content block 2 on larger screens */
+                margin-bottom: 30%;
+
     }
 
     .section:nth-child(4) {
         grid-column: span 2; /* Span two columns for content block 3 on larger screens */
+                margin-bottom: 30%;
+
     }
 
         .section:nth-child(5) {
@@ -755,13 +759,14 @@ footer {
 
     .section:nth-child(6) {
         grid-column: span 1; /* Span two columns for content block 3 on larger screens */
+                margin-bottom: 30%;
+
     }
 
     .section {
         border: 1px solid  rgba(0.0, 0.0, 0.0, 0.0); /* Add a border to each section for separation */
         padding: 20px;
-        margin-bottom: 30%;
-    }
+        }
 
     .image-container {
         display: flex;
