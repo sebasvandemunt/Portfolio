@@ -144,12 +144,14 @@ header {
     background-color: #9B7070;
     border-radius: 20px;
     position: relative;
+    margin-left: -0.5%;
 }
 
 .section.content-block-1.right-container
 {
     border: 1.5px solid #333333;
     border-radius: 20px;
+    margin-left: -0.5%;
 
 }
 
