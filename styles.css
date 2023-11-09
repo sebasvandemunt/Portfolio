@@ -36,6 +36,12 @@ h2, h3, h4, h5, h6 {
     font-size: 24px;
 }
 
+/* Headers with Patrick Hand SC in bold */
+h4 {
+    font-family: 'Pangolin', sans-serif;
+    font-size: 22px;
+}
+
 h1 {
     font-family: 'Pangolin', sans-serif;
     text-align: center;
