@@ -144,14 +144,14 @@ header {
     background-color: #9B7070;
     border-radius: 20px;
     position: relative;
-    margin-left: -0.5%;
+    /* margin-left: -0.5%; */
 }
 
 .section.content-block-1.right-container
 {
     border: 1.5px solid #333333;
     border-radius: 20px;
-    margin-left: -0.5%;
+    /* margin-left: -0.5%; */
 
 }
 
@@ -168,8 +168,8 @@ header {
 /* Image on the left */
 .image {
     grid-column: span 1; /* Span one column */
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: auto;
     background-color: transparent; /* Remove background color */
     border: none; /* Remove border */
 }
@@ -755,7 +755,6 @@ footer {
         border: 1px solid  rgba(0.0, 0.0, 0.0, 0.0); /* Add a border to each section for separation */
         padding: 20px;
         margin-bottom: 30%;
-        margin-left: 0%;
     }
 
     .image-container {
