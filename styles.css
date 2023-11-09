@@ -1,5 +1,8 @@
-@import url('https://fonts.google.com/specimen/Pangolin?query=pangolin');
-@import url('https://fonts.google.com/specimen/Dosis?query=dosis');
+/* Link to Google Fonts for Pangolin */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+/* Link to Google Fonts for Dosis */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100&display=swap');
 
 /* Font-Face for Pangolin (Regular) */
 /* @font-face {
@@ -29,12 +32,12 @@ body, h1, h2, p, ul, li {
 
 /* Headers with Patrick Hand SC in bold */
 h2, h3, h4, h5, h6 {
-    font-family: 'Pangolin', cursive;
+    font-family: 'Pangolin', sans-serif;
     font-size: 24px;
 }
 
 h1 {
-    font-family: 'Pangolin', cursive;
+    font-family: 'Pangolin', sans-serif;
     text-align: center;
 }
 
@@ -44,7 +47,7 @@ h1, h2, h3 {
 
 /* Normal text with Patrick Hand */
 body, p, ul, li, a, footer {
-    font-family: 'Dosis', cursive;
+    font-family: 'Dosis', sans-serif;
     text-decoration: none; /* Remove underline */
     color: black; /* Set the link color to black */
 
