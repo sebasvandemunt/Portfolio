@@ -260,7 +260,9 @@ header {
 
 .Game1,
 .Game2,
-.Game3 {
+.Game3,
+.Project1,
+.Project2 {
     max-width: 100%; /* Set images to the maximum width of their container */
     height: auto; /* Allow height to adjust proportionally */
     display: block; /* Ensure images stack vertically */
@@ -268,6 +270,7 @@ header {
     margin: 10px;
     border-radius: 20px;
     border: 1.5px solid #333333; /* Adjust the alpha value for transparency */
+    cursor: pointer;
 
 }
 
