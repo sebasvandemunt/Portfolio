@@ -753,8 +753,9 @@ footer {
 
     }
 
-        .section:nth-child(5) {
+    .section:nth-child(5) {
         grid-column: span 1; /* Span two columns for content block 3 on larger screens */
+                        margin-bottom: 30%;
     }
 
     .section:nth-child(6) {
@@ -926,5 +927,9 @@ footer {
 
     .profile-photo2 {
         margin-top: 0%;
+    }
+
+    .section:nth-child(5) {
+       margin-bottom: 30%;
     }
 }
