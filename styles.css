@@ -1,20 +1,25 @@
+@import url('https://fonts.google.com/specimen/Pangolin?query=pangolin');
+@import url('https://fonts.google.com/specimen/Dosis?query=dosis');
+
+
 /* Font-Face for Pangolin (Regular) */
-@font-face {
+/* @font-face {
     font-family: 'Pangolin';
-    src: url('fonts/pangolin-regular-webfont.woff2') format('woff2'),
+    src: 
+         url('fonts/pangolin-regular-webfont.woff2') format('woff2'),
          url('fonts/pangolin-regular-webfont.woff') format('woff'),
          url('fonts/pangolin-regular-webfont.ttf') format('truetype');
     font-weight: normal;
-}
+} */
 
 /* Font-Face for Dosis (Variable Font) */
-@font-face {
+/* @font-face {
     font-family: 'Dosis';
     src: url('fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
          url('fonts/dosis-variablefont_wght-webfont.woff') format('woff'),
          url('fonts/dosis-variablefont_wght-webfont.ttf') format('truetype');
     font-weight: normal;
-}
+} */
 
 
 /* Reset some default styles */
