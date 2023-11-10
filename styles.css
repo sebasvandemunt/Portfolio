@@ -447,13 +447,17 @@ footer {
 
 .text-and-video {
     /* Your existing styles for the video container */
-    margin-top: 50px; /* Add a margin-top to push the video content down */
 }
 
 
 /* CSS for Header */
 .popup-content h3 {
     text-align: left; /* Align the header text to the left */
+}
+
+/* CSS for Header Text */
+.header-text {
+    margin-bottom: 10px;
 }
 
 /* CSS for Header Text */
