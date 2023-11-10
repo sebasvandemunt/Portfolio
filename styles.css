@@ -40,7 +40,6 @@ body, p, ul, li, a, footer {
 }
 
 body {
-    background-color: #FFF9F3;
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -648,7 +647,8 @@ footer {
     }
 
     body {
-    background-image: url('Images/PortfolioBackground-40.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+        background-image: url('Images/PortfolioBackground-40.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+        background-color: #FFF9F3;
     }
 
         /* Style for the header block */
@@ -793,7 +793,8 @@ footer {
     /* Smaller Screens Styles */
 
     body {
-    background-image: url('Images/PortfolioBackground-41.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+        background-image: url('Images/PortfolioBackground-41.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+            background-color: #FFE5D4;
     }
             /* Style for the header block */
     .header-block {
