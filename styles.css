@@ -4,26 +4,6 @@
 /* Link to Google Fonts for Dosis */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100&display=swap');
 
-/* Font-Face for Pangolin (Regular) */
-/* @font-face {
-    font-family: 'Pangolin';
-    src: 
-         url('fonts/pangolin-regular-webfont.woff2') format('woff2'),
-         url('fonts/pangolin-regular-webfont.woff') format('woff'),
-         url('fonts/pangolin-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-} */
-
-/* Font-Face for Dosis (Variable Font) */
-/* @font-face {
-    font-family: 'Dosis';
-    src: url('fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
-         url('fonts/dosis-variablefont_wght-webfont.woff') format('woff'),
-         url('fonts/dosis-variablefont_wght-webfont.ttf') format('truetype');
-    font-weight: normal;
-} */
-
-
 /* Reset some default styles */
 body, h1, h2, p, ul, li {
     margin: 0;
@@ -61,7 +41,13 @@ body, p, ul, li, a, footer {
 
 body {
     background-color: #FFF9F3;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+
 
 /* Header Styles */
 header {
@@ -661,6 +647,10 @@ footer {
         font-size: 18px;
     }
 
+    body {
+    background-image: url('Images/PortfolioBackground-40.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+    }
+
         /* Style for the header block */
     .header-block {
         padding: 10px;
@@ -802,6 +792,9 @@ footer {
 @media screen and (max-width: 767px) {
     /* Smaller Screens Styles */
 
+    body {
+    background-image: url('Images/PortfolioBackground-41.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
+    }
             /* Style for the header block */
     .header-block {
         padding: 5px;
