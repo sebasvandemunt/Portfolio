@@ -190,6 +190,7 @@ header {
 
     .profile-photo2 {
     max-width: 100%; /* Allow the image to resize based on screen width */
+    width: auto;
     display: block; /* Center align the image */
     margin: 0 auto; /* Center the image horizontally */
     height: auto; /* Allow the height to adjust proportionally */
@@ -745,12 +746,12 @@ footer {
 
     .section:nth-child(5) {
         grid-column: span 1; /* Span two columns for content block 3 on larger screens */
-                        margin-bottom: 30%;
+        margin-bottom: 0%;
     }
 
     .section:nth-child(6) {
         grid-column: span 1; /* Span two columns for content block 3 on larger screens */
-                margin-bottom: 30%;
+        margin-bottom: 30%;
 
     }
 
