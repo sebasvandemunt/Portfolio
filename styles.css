@@ -44,6 +44,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #FFF9F3;
 }
 
 
@@ -477,18 +478,24 @@ footer {
 /* CSS for Text and Video Container */
 .text-and-video {
     display: flex;
-    flex-direction: row; /* Display text and video side by side */
+    flex-direction: column; /* Display text and video in a column on smaller screens */
 }
 
 /* CSS for the Left and Right Columns */
 .left-column {
     flex: 1; /* Distribute available space evenly between text and video columns */
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .right-column {
     flex: 1;
     max-height: 350px; /* Set a maximum height for the image */
+    width: 100%;
     overflow: hidden; /* Hide any overflowing content beyond the max height */
+    margin-bottom: 10px;
 }
 
 .right-column img {
@@ -662,7 +669,6 @@ footer {
 
     body {
         background-image: url('Images/PortfolioBackground-40.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
-        background-color: #FFF9F3;
     }
 
         /* Style for the header block */
@@ -801,6 +807,15 @@ footer {
     .profile-photo2 {
     margin-top: -50%;
     }
+
+    .text-and-video {
+        flex-direction: row; /* Display text and video side by side on larger screens */
+    }
+
+    .left-column,
+    .right-column {
+        width: 50%; /* Set the width to 50% for each column on larger screens */
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -808,7 +823,6 @@ footer {
 
     body {
         background-image: url('Images/PortfolioBackground-41.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
-            background-color: #FFE5D4;
     }
             /* Style for the header block */
     .header-block {
@@ -945,4 +959,5 @@ footer {
     .section:nth-child(5) {
        margin-bottom: 30%;
     }
+
 }
