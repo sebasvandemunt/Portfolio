@@ -391,8 +391,6 @@ header {
     align-items: stretch;
 }
 
-
-
 /* Animation for showing the popup overlay */
 .popup-show {
     animation: fadeIn 0.5s ease-in-out forwards;
@@ -451,10 +449,6 @@ footer {
         transform: scale(1.025); /* Zoom in effect on hover */
 }
 
-.text-and-video {
-    /* Your existing styles for the video container */
-}
-
 
 /* CSS for Header */
 .popup-content h3 {
@@ -481,6 +475,16 @@ footer {
     flex-direction: column; /* Display text and video in a column on smaller screens */
 }
 
+.extra-video {
+    margin-top: 10px;
+    float: left; /* Add this line to float the video to the right */
+    clear: right; /* Add this line to clear the float */
+}
+
+.content-scrollbox {
+    overflow: auto; /* Add overflow to enable scrolling if needed */
+}
+
 /* CSS for the Left and Right Columns */
 .left-column {
     flex: 1; /* Distribute available space evenly between text and video columns */
@@ -488,6 +492,30 @@ footer {
     max-width: 100%;
     margin-bottom: 10px;
     word-wrap: break-word;
+}
+
+.left-column p {
+        margin-bottom: 10px;
+}
+
+.additional-text a {
+
+}
+
+.additional-text p {
+        display: inline-block;
+        width: auto;
+        padding: 10px;
+        background-color: #F7E4E4; /* Replace 'your-color' with the desired background color */
+        border: 1px solid #333333;
+        border-radius: 20px;
+        transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+}
+
+
+
+.additional-text p:hover {
+    transform: scale(1.025); /* Zoom in effect on hover */
 }
 
 .right-column {
@@ -503,6 +531,18 @@ footer {
     height: auto; /* Allow the height to adjust proportionally */
     width: auto; /* Allow the image to resize based on the container width */
 }
+
+    .left-column iframe {
+        max-width: 100%;
+        border-radius: 20px; /* Adjust the border-radius value as needed */
+    border: 1.5px solid #333333;
+    }
+
+    .right-column iframe {
+        max-width: 100%;
+        border-radius: 20px; /* Adjust the border-radius value as needed */
+    border: 1.5px solid #333333;
+    }
 
 
 /* CSS for Additional Text Section */
@@ -812,9 +852,21 @@ footer {
         flex-direction: row; /* Display text and video side by side on larger screens */
     }
 
+    .left-column {
+        margin-right: 10px;
+    }
+
     .left-column,
     .right-column {
         width: 50%; /* Set the width to 50% for each column on larger screens */
+    }
+
+    .extra-video {
+        width: 75%;
+    }
+
+    .additional-text p {
+            margin: 10px;
     }
 }
 
@@ -877,6 +929,10 @@ footer {
 
     .text-container a {
         text-decoration: underline;
+        font-size: 16px;
+    }
+
+    .additional-text a {
         font-size: 16px;
     }
 
@@ -958,6 +1014,16 @@ footer {
 
     .section:nth-child(5) {
        margin-bottom: 30%;
+    }
+
+    .extra-video {
+        width: 100%;
+    }
+
+    .additional-text p {
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
     }
 
 }
