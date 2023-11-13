@@ -457,7 +457,9 @@ footer {
 
 /* CSS for Header Text */
 .header-text {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #333333; /* Add a horizontal line underneath header-text */
+    padding-bottom: 10px; /* Adjust padding as needed */
 }
 
 /* CSS for Header Text */
@@ -491,6 +493,7 @@ footer {
     width: 100%;
     max-width: 100%;
     margin-bottom: 10px;
+    margin-right: 10px;
     word-wrap: break-word;
 }
 
@@ -520,9 +523,8 @@ footer {
 
 .right-column {
     flex: 1;
-    max-height: 350px; /* Set a maximum height for the image */
     width: 100%;
-    overflow: hidden; /* Hide any overflowing content beyond the max height */
+    overflow: auto; /* Hide any overflowing content beyond the max height */
     margin-bottom: 10px;
 }
 
@@ -532,17 +534,31 @@ footer {
     width: auto; /* Allow the image to resize based on the container width */
 }
 
-    .left-column iframe {
-        max-width: 100%;
-        border-radius: 20px; /* Adjust the border-radius value as needed */
+.left-column iframe {
+    max-width: 95%;
+    border-radius: 20px; /* Adjust the border-radius value as needed */
     border: 1.5px solid #333333;
-    }
+}
 
-    .right-column iframe {
-        max-width: 100%;
-        border-radius: 20px; /* Adjust the border-radius value as needed */
+.right-column iframe {
+    max-width: 95%;
+    max-height: 100%;
+    border-radius: 20px; /* Adjust the border-radius value as needed */
     border: 1.5px solid #333333;
-    }
+    float: right; /* Add this line to float the video to the right */
+    margin-right: 10px;
+}
+
+.right-column p {
+    margin-bottom: 10px;
+}
+
+.popup-image {
+    max-width: 100%;
+    border-radius: 20px; /* Adjust the border-radius value as needed */
+    float: right; /* Add this line to float the video to the right */
+    clear: right; /* Add this line to clear the float */
+}
 
 
 /* CSS for Additional Text Section */
@@ -580,9 +596,6 @@ footer {
 .image-wrapper:hover .image-caption {
     opacity: 1;
 }
-
-
-
 
 /* Footer Styles */
 footer {
@@ -852,8 +865,16 @@ footer {
         flex-direction: row; /* Display text and video side by side on larger screens */
     }
 
+    .right-column {
+        margin-left: 10px;
+        padding-right: 0px;
+    }
+
     .left-column {
         margin-right: 10px;
+        padding-right: 20px; /* Adjust padding as needed */
+        border-right: 1.5px solid #333333; /* Add a vertical line between left-column and right-column */
+
     }
 
     .left-column,
@@ -862,7 +883,7 @@ footer {
     }
 
     .extra-video {
-        width: 75%;
+        margin-top: 10px;
     }
 
     .additional-text p {
