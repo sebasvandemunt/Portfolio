@@ -41,6 +41,63 @@ body, p, ul, li, a, footer {
 
 }
 
+/* Main site content shake animations */
+.container p {
+  animation: shake1 4s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-text {
+  animation: shake1 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-image,
+.image-wrapper {
+  animation: shake1 3s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+@keyframes shake1 {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(0, -2px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+}
+
+/* Popup content shake animations */
+
+.content-scrollbox p {
+  animation: shake2 4s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.header-text p {
+  animation: shake2 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-block h3 {
+  animation: shake2 3s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+
+
+@keyframes shake2 {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(0, -0.5px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(0, 0.5px, 0);
+  }
+}
+
+
+
+
 body {
     background-size: 100% 100%;
     background-position: center;
@@ -48,8 +105,6 @@ body {
     background-attachment: fixed;
     background-color: #FFF9F3;
 }
-
-
 
 /* Header Styles */
 header {
@@ -471,7 +526,7 @@ footer {
 
 
 .text-container a {
-    text-decoration: underline;
+     text-decoration: underline;
 }
 
 /* CSS for Text and Video Container */
@@ -666,7 +721,7 @@ footer {
 
 /* Add this rule for sliding animations */
 .popup.slideFromBottom {
-    animation: slideFromBottom 0.5s ease-in-out forwards;
+    animation: slideFromBottom 1s ease-in-out forwards;
 }
 
 .popup.slideToBottom {
@@ -677,6 +732,10 @@ footer {
     0% {
         transform: translateY(100%);
         opacity: 0;
+    }
+    66% {
+        transform: translateY(-7.5%); /* Overshoots above the final position */
+        opacity: 1;
     }
     100% {
         transform: translateY(0);

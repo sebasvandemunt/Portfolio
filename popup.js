@@ -30,7 +30,7 @@ function openPopup(popupId) {
 
         // Clear the animation class for sliding
         popup.classList.remove('slideFromBottom');
-    }, 500); // Adjust the delay time as needed
+    }, 1000); // Adjust the delay time as needed
 }
 
 
