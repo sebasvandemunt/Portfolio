@@ -1,3 +1,5 @@
+// CODE BY SEBAS VAN DE MUNT //
+
 function openPopup(popupId) {
     var popup = document.getElementById('popup' + popupId);
     var overlay = popup.querySelector('.overlay');
@@ -198,3 +200,5 @@ function scrollToTop(event) {
         behavior: 'smooth',
     });
 }
+
+// CODE BY SEBAS VAN DE MUNT //

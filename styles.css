@@ -1,3 +1,5 @@
+/* CODE BY SEBAS VAN DE MUNT */
+
 /* Link to Google Fonts for Pangolin */
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
@@ -467,9 +469,10 @@ footer {
     text-align: left; /* Align the text on the left to the left */
 }
 
-    .text-container a {
-        text-decoration: underline;
-    }
+
+.text-container a {
+    text-decoration: underline;
+}
 
 /* CSS for Text and Video Container */
 .text-and-video {
@@ -485,6 +488,9 @@ footer {
 
 .content-scrollbox {
     overflow: auto; /* Add overflow to enable scrolling if needed */
+    background-color: #B79292;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 /* CSS for the Left and Right Columns */
@@ -1048,3 +1054,5 @@ footer {
     }
 
 }
+
+/* CODE BY SEBAS VAN DE MUNT */
