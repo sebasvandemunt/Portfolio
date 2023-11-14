@@ -69,16 +69,17 @@ body, p, ul, li, a, footer {
 
 /* Popup content shake animations */
 
-.content-scrollbox p {
-  animation: shake2 4s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-.header-text p {
+.content-scrollbox p,
+.popup-image {
   animation: shake2 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
 }
 
-.heading-block h3 {
+.header-text p {
   animation: shake2 3s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-block h3 {
+  animation: shake2 2.5s cubic-bezier(.36,.07,.19,.97) 0s both;
 }
 
 
@@ -201,7 +202,16 @@ header {
     border: 1.5px solid #333333;
     border-radius: 20px;
     /* margin-left: -0.5%; */
+}
 
+/* Add this CSS for hover effect on heading-text */
+.right-container:hover .heading-text {
+    font-size: 1.05em; /* Adjust the size as needed */
+}
+
+/* Add transition for a smooth effect */
+.heading-text {
+    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
 }
 
 .section.content-block-1.right-container p
@@ -397,6 +407,39 @@ header {
     transform: scale(1.025); /* Zoom in effect on hover */
 }
 
+/* Add this CSS for hover effect on heading-text */
+#videoGamesSection:hover .heading-text {
+    font-size: 1.05em; /* Adjust the size as needed */
+}
+
+/* Add transition for a smooth effect */
+.heading-text {
+    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+
+/* Add this CSS for hover effect on heading-text */
+#digitalDesignSection:hover .heading-text {
+    font-size: 1.05em; /* Adjust the size as needed */
+}
+
+/* Add transition for a smooth effect */
+.heading-text {
+    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+
+/* Add this CSS for hover effect on heading-text */
+#contactSection:hover .heading-text {
+    font-size: 1.05em; /* Adjust the size as needed */
+}
+
+/* Add transition for a smooth effect */
+.heading-text {
+    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+
 
 /* Pop-up Styles */
 .popup {
@@ -414,7 +457,6 @@ header {
     text-align: center;
     overflow: auto; /* Add overflow to enable scrolling if needed */
 }
-
 
 
 /* Add this rule for styling the h3 within the heading block in popups */
@@ -656,6 +698,23 @@ footer {
 
 .image-wrapper:hover .image-caption {
     opacity: 1;
+}
+
+.image-caption-outline {
+    position: absolute;
+    bottom: 0; /* Position the caption at the bottom of the image */
+    left: 0; /* Position the caption at the left of the image */
+    width: 100%; /* Make the caption the same width as the image */
+    background: rgba(0, 0, 0, 0.0);
+    color: #333333;
+    padding: 10px 0; /* Adjust padding as needed */
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .image-caption-outline {
+    opacity: 1;
+    transform: scaleY(1.2) scaleX(1.05) translateY(2.5px); /* Adjust the translateY value as needed */
 }
 
 /* Footer Styles */
@@ -917,6 +976,14 @@ footer {
     opacity: 1;
     }
 
+    .image-caption-outline {
+    opacity: 0;
+    }
+
+    .image-wrapper:hover .image-caption-outline {
+    opacity: 1;
+    }
+
     .custom-close-button {
     width: 45px; /* Set the width of the custom close button */
     height: 45px; /* Set the height of the custom close button */
@@ -1086,6 +1153,10 @@ footer {
     }
 
     .image-wrapper:hover .image-caption {
+        opacity: 1; /* Ensure the caption is always visible on hover */
+    }
+
+    .image-wrapper:hover .image-caption-outline {
         opacity: 1; /* Ensure the caption is always visible on hover */
     }
 
