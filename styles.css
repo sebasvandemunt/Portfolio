@@ -6,19 +6,18 @@
 /* Link to Google Fonts for Dosis */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100&display=swap');
 
-/* Reset some default styles */
+
+/* DEFAULT STYLES */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Headers with Patrick Hand SC in bold */
 h2, h3, h4, h5, h6 {
     font-family: 'Pangolin', sans-serif;
     font-size: 24px;
 }
 
-/* Headers with Patrick Hand SC in bold */
 h4 {
     font-family: 'Pangolin', sans-serif;
     font-size: 22px;
@@ -33,71 +32,12 @@ h1, h2, h3 {
     color: #FFF9F3;
 }
 
-/* Normal text with Patrick Hand */
 body, p, ul, li, a, footer {
     font-family: 'Dosis', sans-serif;
-    text-decoration: none; /* Remove underline */
-    color: black; /* Set the link color to black */
+    text-decoration: none;
+    color: #1E1E1E;
 
 }
-
-/* Main site content shake animations */
-.container p {
-  animation: shake1 4s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-.heading-text {
-  animation: shake1 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-.heading-image,
-.image-wrapper {
-  animation: shake1 3s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-@keyframes shake1 {
-  from, to {
-    transform: translate3d(0, 0, 0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate3d(0, -2px, 0);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translate3d(0, 2px, 0);
-  }
-}
-
-/* Popup content shake animations */
-
-.content-scrollbox p,
-.popup-image {
-  animation: shake2 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-.header-text p {
-  animation: shake2 3s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-.heading-block h3 {
-  animation: shake2 2.5s cubic-bezier(.36,.07,.19,.97) 0s both;
-}
-
-
-
-@keyframes shake2 {
-  from, to {
-    transform: translate3d(0, 0, 0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate3d(0, -0.5px, 0);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translate3d(0, 0.5px, 0);
-  }
-}
-
-
-
 
 body {
     background-size: 100% 100%;
@@ -107,9 +47,9 @@ body {
     background-color: #FFF9F3;
 }
 
-/* Header Styles */
+/* HEADER STYLES */
 header {
-    background-color: transparent; /* Transparent header */
+    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -117,24 +57,64 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
+    max-width: 100%;
 }
 
 .logo {
-    max-width: 100%; /* Adjust the width as needed */
+    max-width: 100%;
     display: flex;
 }
 
-/* Center the logo and h1 title vertically within the header */
 .logo.first-header-block {
     display: flex;
     align-items: center;
     color: #7C5252;
-    border: 1.5px solid #333333; /* Adjust the alpha value for transparency */
+    border: 1.5px solid #333333;
     max-width: 100%;
 }
 
-/* Add a new style to hide the second image initially */
+.header-block {
+    display: inline-block;
+    background-color: #F7E4E4;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    margin-top: 0px;
+    transition: transform 0.3s ease;
+}
+
+.header-block:hover {
+    transform: scale(1.025);
+}
+
+.first-header-block {
+    display: inline-block;
+    background-color: #7C5252;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 0px;
+    width: auto;
+    margin-top: 0px;
+    transition: transform 0.3s ease;
+}
+
+.first-header-block:hover {
+    transform: scale(1.025);
+}
+
+.first-header-block-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.first-header-block-content:hover {
+    transform: scale(1.04);
+}
+
 .logo-image img.second-image {
     display: none;
 }
@@ -143,36 +123,33 @@ header {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align navigation buttons to the right */
-    margin-top: 0px; /* Add margin to separate navigation from the top of the header */
+    justify-content: flex-end;
+    margin-top: 0px;
 }
-
 
 .nav li {
-    margin: 0 10px; /* Add margin to the right of each navigation item */
+    margin: 0 10px;
 }
 
-
-/* Style for the third and fourth buttons */
 .nav li:nth-child(3), .nav li:nth-child(4) {
-    margin-left: 5px; /* Remove the margin for the third and fourth buttons */
-    margin-right: 0px; /* Add margin to separate the third and fourth buttons */
+    margin-left: 5px;
+    margin-right: 0px;
 }
 
-/* CSS for the navigation icons */
 .nav-icon {
-    vertical-align: middle; /* Align icons vertically with text */
+    vertical-align: middle;
 }
 
-/* Main Content Styles */
+/* MAIN CONTENT STYLES */
+/* content blocks */
 .container {
-    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout by default */
+    grid-template-columns: 1fr;
     grid-gap: 20px;
-    border: none; /* Remove border */
+    border: none;
     position: relative;
     align-items: center;
 }
@@ -181,12 +158,13 @@ header {
     display: inline-flex;
     background-color: #9B7070;
     padding: 10px;
-    max-width: fit-content; /* Set it to fit the content width */
+    max-width: fit-content;
     position: relative;
 }
 
 .heading-text {
     margin-right: 0px;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .section {
@@ -194,24 +172,16 @@ header {
     background-color: #9B7070;
     border-radius: 20px;
     position: relative;
-    /* margin-left: -0.5%; */
 }
 
 .section.content-block-1.right-container
 {
     border: 1.5px solid #333333;
     border-radius: 20px;
-    /* margin-left: -0.5%; */
 }
 
-/* Add this CSS for hover effect on heading-text */
 .right-container:hover .heading-text {
-    font-size: 1.05em; /* Adjust the size as needed */
-}
-
-/* Add transition for a smooth effect */
-.heading-text {
-    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+    font-size: 1.05em;
 }
 
 .section.content-block-1.right-container p
@@ -223,57 +193,6 @@ header {
     border: 1.5px solid #333333;
     border-radius: 20px;
 }
-
-.section.image2.hidden-content {
-    border: none;
-    border-radius: 20px;
-}
-
-/* Image on the left */
-.image {
-    grid-column: span 1; /* Span one column */
-    height: auto;
-    width: auto;
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove border */
-}
-
-
-.profile-photo {
-    max-width: 100%; /* Allow the image to resize based on screen width */
-    display: block; /* Center align the image */
-    margin: 0 auto; /* Center the image horizontally */
-    margin-top: -10%;
-    height: auto; /* Allow the height to adjust proportionally */
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-
-}
-
-    .profile-photo:hover {
-        transform: rotate(-2deg); /* Rotate the image by 3 degrees on hover */
-    }
-
-    .image2 {
-    grid-column: span 1; /* Span one column */
-    height: 400px;
-    width: 400px;
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    }
-
-    .profile-photo2 {
-    max-width: 100%; /* Allow the image to resize based on screen width */
-    width: auto;
-    display: block; /* Center align the image */
-    margin: 0 auto; /* Center the image horizontally */
-    height: auto; /* Allow the height to adjust proportionally */
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-    }
-
-    .profile-photo2:hover {
-        transform: rotate(2deg); /* Rotate the image by 3 degrees on hover */
-    }
-
 
 .heading-block {
     display: inline-flex;
@@ -309,12 +228,35 @@ header {
     border-top-right-radius: 20px;
 }
 
+#videoGamesSection:hover .heading-text {
+    font-size: 1.05em;
+}
+
+.heading-text {
+    transition: font-size 0.3s ease-in-out;
+}
+
+#digitalDesignSection:hover .heading-text {
+    font-size: 1.05em;
+}
+
+.heading-text {
+    transition: font-size 0.3s ease-in-out;
+}
+
+#contactSection:hover .heading-text {
+    font-size: 1.05em;
+}
+
+.heading-text {
+    transition: font-size 0.3s ease-in-out;
+}
+
 .heading-image {
     max-width: 50px;
     display: inline-block;
     margin-right: 10px; /* Add some space between the image and text */
 }
-
 
 .move-up {
     margin-top: -50px;
@@ -322,72 +264,75 @@ header {
     z-index: 1;
 }
 
-/* Style for the header block */
-.header-block {
-    display: inline-block;
-    background-color: #F7E4E4; /* Replace 'your-color' with the desired background color */
-    border: 1px solid #333333;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    width: auto;
-    margin-top: 0px;
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-
-}
-
-.header-block:hover {
-    transform: scale(1.025); /* Zoom in effect on hover */
-}
-
-.first-header-block {
-    display: inline-block;
-    background-color: #7C5252; /* Replace 'your-color' with the desired background color */
-    border-radius: 30px; /* Adjust border radius as needed */
-    padding: 10px;
-    margin-bottom: 0px;
-    width: auto;
-    margin-top: 0px;
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-
-}
-
-.first-header-block:hover {
-    transform: scale(1.025); /* Zoom in effect on hover */
-}
-
-/* Style the header block */
-.first-header-block-content {
-    display: flex;
-    align-items: center; /* Center elements vertically within the header block */
-    justify-content: center;
-    max-width: 100%;
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-
-}
-
-.first-header-block-content:hover {
-    transform: scale(1.04); /* Zoom in effect on hover */
-}
-
-/* Content Block 1 (Anchored to the right) */
 .content-block-1 {
-    grid-column: span 1; /* Span one column */
-    margin-left: 0px; /* Overlap a bit to the left */
-    margin-right: 0px; /* Overlap a bit to the right */
+    grid-column: span 1;
+    margin-left: 0px; 
+    margin-right: 0px; 
     margin-top: -250px;
     margin-bottom: 150px;
-    padding: 20px; /* Add padding for spacing */
+    padding: 20px;
     background-color: #9B7070;
     border: 1.5px solid #333333;
     border-radius: 20px;
-    height: auto; /* Adjust the height as needed */
+    height: auto;
 }
 
+/* Image near the about me section */
+.image {
+    grid-column: span 1;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    border: none;
+}
+
+.profile-photo {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -10%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: rotate(-2deg);
+}
+
+.image2 {
+    grid-column: span 1;
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Image near the contact section */
+.profile-photo2 {
+    max-width: 100%;
+    width: auto;
+    display: block; 
+    margin: 0 auto; 
+    height: auto; 
+    transition: transform 0.3s ease;
+}
+
+.profile-photo2:hover {
+    transform: rotate(2deg);
+}
+
+.section.image2.hidden-content {
+    border: none;
+    border-radius: 20px;
+}
+
+/* Projects */
 .Game1,
 .Game2,
 .Game3,
 .Project1,
-.Project2 {
+.Project2,
+.Project3 {
     max-width: 100%;
     height: auto;
     display: block;
@@ -396,281 +341,19 @@ header {
     border-radius: 20px;
     border: 1.5px solid #333333;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
+    transition: transform 0.3s ease;
 }
 
 .Game1:hover,
 .Game2:hover,
 .Game3:hover,
 .Project1:hover,
-.Project2:hover {
-    transform: scale(1.025); /* Zoom in effect on hover */
+.Project2:hover,
+.Project3:hover {
+    transform: scale(1.025);
 }
 
-/* Add this CSS for hover effect on heading-text */
-#videoGamesSection:hover .heading-text {
-    font-size: 1.05em; /* Adjust the size as needed */
-}
-
-/* Add transition for a smooth effect */
-.heading-text {
-    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
-}
-
-
-/* Add this CSS for hover effect on heading-text */
-#digitalDesignSection:hover .heading-text {
-    font-size: 1.05em; /* Adjust the size as needed */
-}
-
-/* Add transition for a smooth effect */
-.heading-text {
-    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
-}
-
-
-/* Add this CSS for hover effect on heading-text */
-#contactSection:hover .heading-text {
-    font-size: 1.05em; /* Adjust the size as needed */
-}
-
-/* Add transition for a smooth effect */
-.heading-text {
-    transition: font-size 0.3s ease-in-out; /* Adjust the duration and easing as needed */
-}
-
-
-
-/* Pop-up Styles */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: auto; /* Add overflow to enable scrolling if needed */
-}
-
-
-/* Add this rule for styling the h3 within the heading block in popups */
-.popup-content .heading-block h3 {
-    text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
-.popup-content {
-    background-color: #9B7070;
-    border: 1.5px solid #333333;
-    border-radius: 20px;
-    padding: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; /* Adjust width percentage to fit within the screen */
-    max-width: 80%; /* Set a max-width if needed */
-    max-height: 75%;
-    margin-top: 10px;
-    z-index: 998;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-/* Animation for showing the popup overlay */
-.popup-show {
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-/* Animation for hiding the popup overlay */
-.popup-hide {
-    animation: fadeOut 0.5s ease-in-out forwards;
-}
-
-/* Style for making content transparent when a popup is open */
-.popup-open .container,
-.popup-open header,
-.popup-open footer {
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Style for reversing the opacity transition */
-.fadeContent {
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Add this rule to reset the opacity to 0% when the popup is closed */
-.revertOpacity .container,
-.revertOpacity header,
-.revertOpacity footer {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-
-.container,
-header,
-footer {
-    transition: opacity 0.5s ease-in-out;
-}
-
-
-/* Style for the custom close button */
-.custom-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    z-index: 999; /* Adjust z-index if needed */
-    transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-
-    /* Add any other styling you want for the custom close button, e.g., background image or color */
-}
-
-/* You can add hover effects, etc., as needed for the close button */
-.custom-close-button:hover {
-    /* Add hover styles here */
-        transform: scale(1.025); /* Zoom in effect on hover */
-}
-
-
-/* CSS for Header */
-.popup-content h3 {
-    text-align: left; /* Align the header text to the left */
-}
-
-/* CSS for Header Text */
-.header-text {
-    margin-bottom: 20px;
-    border-bottom: 1.5px solid #333333; /* Add a horizontal line underneath header-text */
-    padding-bottom: 10px; /* Adjust padding as needed */
-}
-
-/* CSS for Header Text */
-.header-text p {
-    text-align: left; /* Align the text on the left to the left */
-}
-
-
-.text-container a {
-     text-decoration: underline;
-}
-
-/* CSS for Text and Video Container */
-.text-and-video {
-    display: flex;
-    flex-direction: column; /* Display text and video in a column on smaller screens */
-}
-
-.extra-video {
-    margin-top: 10px;
-    float: left; /* Add this line to float the video to the right */
-    clear: right; /* Add this line to clear the float */
-}
-
-.content-scrollbox {
-    overflow: auto; /* Add overflow to enable scrolling if needed */
-    background-color: #B79292;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* CSS for the Left and Right Columns */
-.left-column {
-    flex: 1; /* Distribute available space evenly between text and video columns */
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    word-wrap: break-word;
-}
-
-.left-column p {
-        margin-bottom: 10px;
-}
-
-.additional-text a {
-
-}
-
-.additional-text p {
-        display: inline-block;
-        width: auto;
-        padding: 10px;
-        background-color: #F7E4E4; /* Replace 'your-color' with the desired background color */
-        border: 1px solid #333333;
-        border-radius: 20px;
-        transition: transform 0.3s ease; /* Add smooth transition for the zoom effect */
-}
-
-
-
-.additional-text p:hover {
-    transform: scale(1.025); /* Zoom in effect on hover */
-}
-
-.right-column {
-    flex: 1;
-    width: 100%;
-    overflow: auto; /* Hide any overflowing content beyond the max height */
-    margin-bottom: 10px;
-}
-
-.right-column img {
-    max-width: 100%; /* Set the maximum width to 100% of the container */
-    height: auto; /* Allow the height to adjust proportionally */
-    width: auto; /* Allow the image to resize based on the container width */
-}
-
-.left-column iframe {
-    max-width: 95%;
-    border-radius: 20px; /* Adjust the border-radius value as needed */
-    border: 1.5px solid #333333;
-}
-
-.right-column iframe {
-    max-width: 95%;
-    max-height: 100%;
-    border-radius: 20px; /* Adjust the border-radius value as needed */
-    border: 1.5px solid #333333;
-    float: right; /* Add this line to float the video to the right */
-    margin-right: 10px;
-}
-
-.right-column p {
-    margin-bottom: 10px;
-}
-
-.popup-image {
-    max-width: 100%;
-    border-radius: 20px; /* Adjust the border-radius value as needed */
-    float: right; /* Add this line to float the video to the right */
-    clear: right; /* Add this line to clear the float */
-}
-
-
-/* CSS for Additional Text Section */
-.additional-text p {
-    text-align: left; /* Align the additional text to the left */
-}
-
-/* Center-align the h4 text within each image container */
-
+/* Buttons for the project pop-ups, within the content blocks */
 .image-wrapper {
     position: relative;
     display: inline-block;
@@ -686,99 +369,278 @@ footer {
 
 .image-caption {
     position: absolute;
-    bottom: 0; /* Position the caption at the bottom of the image */
-    left: 0; /* Position the caption at the left of the image */
-    width: 100%; /* Make the caption the same width as the image */
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: rgba(0, 0, 0, 0.0);
     color: #FFF9F3;
-    padding: 10px 0; /* Adjust padding as needed */
+    padding: 10px 0;
     text-align: center;
     transition: opacity 0.3s ease-in-out;
-}
-
-.image-wrapper:hover .image-caption {
-    opacity: 1;
 }
 
 .image-caption-outline {
     position: absolute;
-    bottom: 0; /* Position the caption at the bottom of the image */
-    left: 0; /* Position the caption at the left of the image */
-    width: 100%; /* Make the caption the same width as the image */
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: rgba(0, 0, 0, 0.0);
     color: #333333;
-    padding: 10px 0; /* Adjust padding as needed */
+    padding: 10px 0;
     text-align: center;
     transition: opacity 0.3s ease-in-out;
 }
 
-.image-wrapper:hover .image-caption-outline {
-    opacity: 1;
-    transform: scaleY(1.2) scaleX(1.05) translateY(2.5px); /* Adjust the translateY value as needed */
+/* Pop-up Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
 }
 
-/* Footer Styles */
+.popup-content .heading-block h3 {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.popup-content {
+    background-color: #9B7070;
+    border: 1.5px solid #333333;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 80%;
+    max-height: 75%;
+    margin-top: 10px;
+    z-index: 998;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.custom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+.custom-close-button:hover {
+    transform: scale(1.025);
+}
+
+.popup-content h3 {
+    text-align: left;
+}
+
+.header-text {
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #333333;
+    padding-bottom: 10px;
+}
+
+.header-text p {
+    text-align: left;
+}
+
+.text-container a {
+     text-decoration: underline;
+}
+
+.text-and-video {
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-video {
+    margin-top: 10px;
+    float: left;
+    clear: right;
+}
+
+.content-scrollbox {
+    overflow: auto;
+    background-color: #B79292;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.left-column {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+.left-column p {
+    margin-bottom: 10px;
+}
+
+.additional-text p {
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    background-color: #F7E4E4;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.additional-text p:hover {
+    transform: scale(1.025);
+}
+
+.right-column {
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.right-column img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.left-column iframe {
+    max-width: 95%;
+    border-radius: 20px;
+    border: 1.5px solid #333333;
+}
+
+.right-column iframe {
+    max-width: 95%;
+    max-height: 100%;
+    border-radius: 20px;
+    border: 1.5px solid #333333;
+    float: right;
+    margin-right: 10px;
+}
+
+.right-column p {
+    margin-bottom: 10px;
+}
+
+.popup-image {
+    max-width: 100%;
+    border-radius: 20px;
+    float: right;
+    clear: right;
+}
+
+.additional-text p {
+    text-align: left;
+}
+
+/* Footer styles */
 footer {
     background-color: #7C5252;
     color: #FFF9F3;
     text-align: center;
     padding: 10px 0;
-    max-width: 100%; /* Set it to 100% to prevent content from exceeding screen width */
+    max-width: 100%;
     border-top: 1.5px solid #333333;
-
 }
 
-/* Animation for image section */
+/* Main site animations on loading */
 .section.image {
     animation: slideFromBottom 1s ease-in-out 0.5s forwards;
-    border: none; /* Remove border */
+    border: none;
 }
 
-/* Animation for content-block-1 */
 .section.content-block-1 {
     animation: slideFromBottom 1s ease-in-out 1s forwards;
 }
 
-/* Animation for the first section */
 .section:nth-child(3) {
     animation: slideFromBottom 1s ease-in-out 1.5s forwards;
 }
 
-/* Animation for the second section */
 .section:nth-child(4) {
     animation: slideFromBottom 1s ease-in-out 2s forwards;
 }
 
-/* Animation for the second section */
 .section:nth-child(5) {
     animation: slideFromBottom 1s ease-in-out 2s forwards;
 }
 
-/* Animation for the second section */
 .section:nth-child(6) {
     animation: slideFromBottom 1s ease-in-out 2s forwards;
 }
 
-/* Add a class to hide content initially */
 .hidden-content {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-
-
-/* You can copy the rest of your existing CSS for h2 and heading-block styles below this section. */
-
-
-/* Animation for revealing content */
 .reveal-content {
     opacity: 1;
     transform: translateY(0);
 }
 
 
-/* Add this rule for sliding animations */
+/* POP-UP ANIMATIONS */
+.popup-show {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.popup-hide {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Making content transparent when a popup is open */
+.popup-open .container,
+.popup-open header,
+.popup-open footer {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Reversing the opacity transition */
+.fadeContent {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Reseting the opacity to 0% when the popup is closed */
+.revertOpacity .container,
+.revertOpacity header,
+.revertOpacity footer {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.container,
+header,
+footer {
+    transition: opacity 0.5s ease-in-out;
+}
+
 .popup.slideFromBottom {
     animation: slideFromBottom 1s ease-in-out forwards;
 }
@@ -793,7 +655,7 @@ footer {
         opacity: 0;
     }
     66% {
-        transform: translateY(-7.5%); /* Overshoots above the final position */
+        transform: translateY(-7.5%);
         opacity: 1;
     }
     100% {
@@ -835,354 +697,407 @@ footer {
     }
 }
 
+/* MAIN SITE ANIMATIONS */
+.container p {
+  animation: shake1 4s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
 
+.heading-text {
+  animation: shake1 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-image,
+.image-wrapper {
+  animation: shake1 3s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+@keyframes shake1 {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(0, -2px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+}
+
+/* Popup content shake animations */
+.content-scrollbox p,
+.popup-image {
+  animation: shake2 3.5s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.header-text p {
+  animation: shake2 3s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+.heading-block h3 {
+  animation: shake2 2.5s cubic-bezier(.36,.07,.19,.97) 0s both;
+}
+
+@keyframes shake2 {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(0, -0.5px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(0, 0.5px, 0);
+  }
+}
+
+/* LARGER SCREEN STYLES */
 @media screen and (min-width: 768px) {
-    /* Larger Screens Styles */
       
-    /* Normal text with Patrick Hand */
-    body, p, ul, li, a, footer {
-        font-size: 18px;
-    }
+/* Default styles */
+body, p, ul, li, a, footer {
+    font-size: 18px;
+}
 
-    body {
-        background-image: url('Images/PortfolioBackground-40.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
-    }
+body {
+    background-image: url('Images/PortfolioBackground-40.png');
+}
 
-        /* Style for the header block */
-    .header-block {
-        padding: 10px;
-    }
+h1 {
+    font-size: 24px;
+    width: auto;
+    max-width: 50%;
+}
 
-    .first-header-block-content{
-        margin-left: 10px;
-        margin-top: 50px;
-        padding-bottom: 10px;
-        padding-right: 10px;
-    }
+/* Header styles */
+.header-block {
+    padding: 10px;
+}
 
-        /* Center the logo and h1 title vertically within the header */
-    .logo.first-header-block {
-        max-width: 25%;
-        width: auto;
-        margin-left: -50px;
-        margin-top: -50px;
-    }
+.first-header-block-content{
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
 
-    .logo-image {
-        max-width: 50%;
-        max-height: 50%;
-        width: 50%;
-        height: 50%;
-        margin-right: 5%;
-        justify-content: right;
-        display: flex;
-    }
+.logo.first-header-block {
+    max-width: 25%;
+    width: auto;
+    margin-left: -50px;
+    margin-top: -50px;
+}
 
-    .logo-image img {
-        max-width: 50%; /* Ensure the image doesn't overflow its container */
-        width: 50%;
-    }
+.logo-image {
+    max-width: 50%;
+    max-height: 50%;
+    width: 50%;
+    height: 50%;
+    margin-right: 5%;
+    justify-content: right;
+    display: flex;
+}
 
-        /* CSS for the navigation icons */
-    .nav-icon {
-        width: 35px; /* Set the width of the icons */
-        height: 35px; /* Set the height of the icons */
-    }
+.logo-image img {
+    max-width: 50%;
+    width: 50%;
+}
 
-    h1 {
-        font-size: 24px;
-        width: auto;
-        max-width: 50%;
-    }
-    .container {
-        max-width: 80%; /* Ensure the container takes the full width of the screen */
-        grid-template-columns: 1fr 1fr; /* Two columns layout for larger screens */
-        margin: 0 auto;
-    }
+.nav-icon {
+    width: 35px;
+    height: 35px;
+}
 
-    .content-block-1 {
-        grid-column: 1; /* Position content-block-1 on the left (first column) */
-    }
+/* content blocks */
+.container {
+    max-width: 80%;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
 
-    .section.content-block-1.right-container
-    {
-        margin-top: -50%;
-        margin-bottom: 50%;
-    }
+.content-block-1 {
+    grid-column: 1;
+}
 
-    .image {
-        grid-column: 2; /* Position the image on the right (second column) */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .section.image {
-        width: auto;
-    }
-
-    .profile-photo {
-        max-width: 100%; /* Allow the image to resize based on screen width */
-        width: auto;
-        display: block; /* Center align the image */
-        height: auto; /* Allow the height to adjust proportionally */
-    }
-
-    .section:nth-child(3) {
-        grid-column: span 2; /* Span two columns for content block 2 on larger screens */
-                margin-bottom: 30%;
-
-    }
-
-    .section:nth-child(4) {
-        grid-column: span 2; /* Span two columns for content block 3 on larger screens */
-                margin-bottom: 30%;
-
-    }
-
-    .section:nth-child(5) {
-        grid-column: span 1; /* Span two columns for content block 3 on larger screens */
-        margin-bottom: 0%;
-    }
-
-    .section:nth-child(6) {
-        grid-column: span 1; /* Span two columns for content block 3 on larger screens */
-        margin-bottom: 30%;
-
-    }
-
-    .section {
-        border: 1px solid  rgba(0.0, 0.0, 0.0, 0.0); /* Add a border to each section for separation */
-        padding: 20px;
-        }
-
-    .image-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden; /* Hide content that overflows the container */
-    }
-
-    .image-container img {
-        max-width: 95%; /* Set images to fit within the container width */
-        height: auto;
-    }
-
-    .image-caption {
-    opacity: 0;
-    }
-
-    .image-wrapper:hover .image-caption {
-    opacity: 1;
-    }
-
-    .image-caption-outline {
-    opacity: 0;
-    }
-
-    .image-wrapper:hover .image-caption-outline {
-    opacity: 1;
-    }
-
-    .custom-close-button {
-    width: 45px; /* Set the width of the custom close button */
-    height: 45px; /* Set the height of the custom close button */
-    }
-
-    .profile-photo2 {
+.section.content-block-1.right-container
+{
     margin-top: -50%;
-    }
+    margin-bottom: 50%;
+}
 
-    .text-and-video {
-        flex-direction: row; /* Display text and video side by side on larger screens */
-    }
+.image {
+    grid-column: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .right-column {
-        margin-left: 10px;
-        padding-right: 0px;
-    }
+.section.image {
+    width: auto;
+}
 
-    .left-column {
-        margin-right: 10px;
-        padding-right: 20px; /* Adjust padding as needed */
-        border-right: 1.5px solid #333333; /* Add a vertical line between left-column and right-column */
+.profile-photo {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    height: auto;
+}
 
-    }
+.section:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 30%;
+}
 
-    .left-column,
-    .right-column {
-        width: 50%; /* Set the width to 50% for each column on larger screens */
-    }
+.section:nth-child(4) {
+    grid-column: span 2;
+    margin-bottom: 30%;
+}
 
-    .extra-video {
-        margin-top: 10px;
-    }
+.section:nth-child(5) {
+    grid-column: span 1;
+    margin-bottom: 0%;
+}
 
-    .additional-text p {
-            margin: 10px;
+.section:nth-child(6) {
+    grid-column: span 1;
+    margin-bottom: 30%;
+}
+
+.section {
+    border: 1px solid  rgba(0.0, 0.0, 0.0, 0.0);
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 95%;
+    height: auto;
+}
+
+.image-caption {
+opacity: 0;
+}
+
+.image-wrapper:hover .image-caption {
+    opacity: 1;
+}
+
+.image-caption-outline {
+    opacity: 0;
+    transform: scaleY(1) scaleX(1) translateY(0px);
+}
+
+.image-wrapper:hover .image-caption-outline {
+    opacity: 1;
+    transform: scaleY(1.2) scaleX(1.05) translateY(2.5px);
+}
+
+.custom-close-button {
+    width: 45px;
+    height: 45px;
+}
+
+.profile-photo2 {
+    margin-top: -50%;
+}
+
+/* Pop-up styles */
+.text-and-video {
+    flex-direction: row;
+}
+
+.right-column {
+    margin-left: 10px;
+    padding-right: 0px;
+}
+
+.left-column {
+    margin-right: 10px;
+    padding-right: 20px;
+    border-right: 1.5px solid #333333;
+}
+
+.left-column,
+.right-column {
+    width: 50%;
+}
+
+.extra-video {
+    margin-top: 10px;
+}
+
+.additional-text p {
+    margin: 10px;
     }
 }
 
+
+/* SMALLER SCREEN STYLES */
 @media screen and (max-width: 767px) {
-    /* Smaller Screens Styles */
 
-    body {
-        background-image: url('Images/PortfolioBackground-41.png'); /* Replace 'Images/PortfolioBackground.png' with the actual path to your image */
-    }
-            /* Style for the header block */
-    .header-block {
-        padding: 5px;
-    }
+/* Default styles */
+body {
+    background-image: url('Images/PortfolioBackground-41.png');
+}
 
-    .first-header-block-content{
-        margin-left: 10px;
-        margin-top: 35px;
-        padding-bottom: 0px;
-        padding-right: 10px;
-    }
-
-        /* Center the logo and h1 title vertically within the header */
-    .logo.first-header-block {
-        max-width: 50%;
-        width: 50%;
-        margin-left: 0px;
-        margin-top: -50px;
-    }
-
-    .logo-image {
-        max-width: 25%;
-        padding-right: 10%;
-    }
-
-    .logo-image img {
-        max-width: 100%; /* Ensure the image doesn't overflow its container */
-    }
-
-    /* CSS for the navigation icons */
-    .nav-icon {
-        width: 20px; /* Set the width of the icons */
-        height: 20px; /* Set the height of the icons */
-        vertical-align: middle; /* Align icons vertically with text */
-        padding: 2.5px;
-    }
-
-    h1 {
+h1 {
     font-size: 150%;
-    }
+}
 
-            /* Normal text with Patrick Hand */
-    body, p, ul, li, footer {
-        font-size: 16px;
-    }
+body, p, ul, li, footer {
+    font-size: 16px;
+}
 
-        /* Normal text with Patrick Hand */
-    a {
-        font-size: 12px;
-    }
+a {
+    font-size: 12px;
+}
 
-    .text-container a {
-        text-decoration: underline;
-        font-size: 16px;
-    }
+.text-container a {
+    text-decoration: underline;
+    font-size: 16px;
+}
 
-    .additional-text a {
-        font-size: 16px;
-    }
+.additional-text a {
+    font-size: 16px;
+}
 
+/* Header styles */
+.header-block {
+    padding: 5px;
+}
 
-    .container {
-        grid-template-columns: 1fr; /* Revert to single column layout for smaller screens */
-        margin: 0 auto;
-        max-width: 100%;
-    }
+.first-header-block-content{
+    margin-left: 10px;
+    margin-top: 35px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+}
 
-    .content-block-1 {
-        grid-column: 1; /* Position content-block-1 on the left (first column) */
-        margin-top: 0px;
-        margin-bottom: 25px;
-    }
+.logo.first-header-block {
+    max-width: 50%;
+    width: 50%;
+    margin-left: 0px;
+    margin-top: -50px;
+}
 
-    .section.content-block-1.right-container
-    {
+.logo-image {
+    max-width: 25%;
+    padding-right: 10%;
+}
+
+.logo-image img {
+    max-width: 100%;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    padding: 2.5px;
+}
+
+header {
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav {
+    margin-top: 0px;
+}
+
+.nav li {
+    margin: 5px;
+}
+
+/* Content blocks */
+.container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.content-block-1 {
+    grid-column: 1;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.section.content-block-1.right-container
+{
     margin-top: 40%;
     margin-bottom: 50%;
-    }
-
-    .image {
-        grid-column: 1; /* Position the image on the left (first column) */
-    }
-
-    .section {
-        width: 90%; /* Set width to 100% for full-width sections */
-        max-width: 90%;
-        margin-bottom: 150px;
-    }
-
-    .section.image {
-        width: auto; /* Set width to 100% for the image section */
-        margin-top: 10%;
-        margin-bottom: -150px;
-    }
-
-    .profile-photo {
-        max-width: 80%; /* Allow the image to resize based on screen width */
-        display: block; /* Center align the image */
-        height: auto; /* Allow the height to adjust proportionally */
-        margin: 0 auto 20px; /* Center the photo and add some margin for separation */
-        float: none; /* Remove the float */
-    }
-
-    .image-container img {
-        max-width: 97%; /* Ensure images don't exceed their container width */
-        height: auto;
-    }
-
-
-    /* Adjust header navigation for smaller screens */
-    header {
-        flex-direction: column; /* Stack navigation items vertically */
-        text-align: center; /* Center align text */
-    }
-
-    .nav {
-        margin-top: 0px; /* Add margin to separate navigation from the logo */
-    }
-
-    .nav li {
-        margin: 5px; /* Add vertical margin to navigation items */
-    }
-
-    .image-wrapper:hover .image-caption {
-        opacity: 1; /* Ensure the caption is always visible on hover */
-    }
-
-    .image-wrapper:hover .image-caption-outline {
-        opacity: 1; /* Ensure the caption is always visible on hover */
-    }
-
-    .custom-close-button {
-        width: 35px; /* Set the width of the custom close button */
-        height: 35px; /* Set the height of the custom close button */
-    }
-
-    .profile-photo2 {
-        margin-top: 0%;
-    }
-
-    .section:nth-child(5) {
-       margin-bottom: 30%;
-    }
-
-    .extra-video {
-        width: 100%;
-    }
-
-    .additional-text p {
-            margin-right: 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-    }
-
 }
 
+.image {
+    grid-column: 1;
+}
+
+.section {
+    width: 90%;
+    max-width: 90%;
+    margin-bottom: 150px;
+}
+
+.section.image {
+    width: auto;
+    margin-top: 10%;
+    margin-bottom: -150px;
+}
+
+.profile-photo {
+    max-width: 80%;
+    display: block;
+    height: auto;
+    margin: 0 auto 20px; 
+    float: none; 
+}
+
+.image-container img {
+    max-width: 97%;
+    height: auto;
+}
+
+.image-caption {
+    opacity: 1;
+}
+
+.image-caption-outline {
+    opacity: 1;
+    transform: scaleY(1.2) scaleX(1.05) translateY(2.5px);
+}
+
+.image-caption-outline:hover {
+    opacity: 1;
+    transform: scaleY(1.2) scaleX(1.05) translateY(2.5px);
+}
+
+.profile-photo2 {
+    margin-top: 0%;
+}
+
+.section:nth-child(5) {
+    margin-bottom: 30%;
+}
+
+/* Pop-up styles */
+.custom-close-button {
+    width: 35px;
+    height: 35px;
+}
+
+.extra-video {
+    width: 100%;
+}
+
+.additional-text p {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+}
 /* CODE BY SEBAS VAN DE MUNT */
