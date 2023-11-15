@@ -165,6 +165,17 @@ function restoreHeadingImage2(element) {
         headingImage.src = "Images/Icon-23.png";
     }
 
+        // JavaScript to change the heading image on hover and restore on mouseout
+    function changeHeadingImage5(element, newSrc) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = newSrc;
+    }
+
+    function restoreHeadingImage5(element) {
+        var headingImage = element.querySelector(".heading-image");
+        headingImage.src = "Images/Icon-42.png";
+    }
+
     // JavaScript to change the close button image in the popup on hover and restore on mouseout
     function changeCloseButtonImage(newSrc, popupId) {
         var closeButton = document.getElementById("closeButton" + popupId);

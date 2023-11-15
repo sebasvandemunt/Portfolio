@@ -184,9 +184,10 @@ header {
     font-size: 1.05em;
 }
 
-.section.content-block-1.right-container p
+.section.content-block-1.right-container p,
+.section:nth-child(6) p
 {
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .section.hidden-content {
@@ -252,6 +253,14 @@ header {
     transition: font-size 0.3s ease-in-out;
 }
 
+#skillsSection:hover .heading-text {
+    font-size: 1.05em;
+}
+
+.heading-text {
+    transition: font-size 0.3s ease-in-out;
+}
+
 .heading-image {
     max-width: 50px;
     display: inline-block;
@@ -304,6 +313,14 @@ header {
 
 .download:hover {
     transform: scale(1.025);
+}
+
+.skills-section {
+    margin-top: 10px;
+}
+
+.list {
+    margin-left: 10px;
 }
 
 /* Image near the about me section */
@@ -882,12 +899,14 @@ h1 {
 
 .section:nth-child(5) {
     grid-column: span 1;
-    margin-bottom: 0%;
+    margin-bottom: 30%;
+    width: auto;
+    max-width: 66%;
 }
 
 .section:nth-child(6) {
     grid-column: span 1;
-    margin-bottom: 30%;
+    margin-bottom: 0%;
 }
 
 .section {
@@ -983,7 +1002,7 @@ body, p, ul, li, footer {
 }
 
 a {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .text-container a {
