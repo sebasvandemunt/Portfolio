@@ -255,7 +255,7 @@ header {
 .heading-image {
     max-width: 50px;
     display: inline-block;
-    margin-right: 10px; /* Add some space between the image and text */
+    margin-right: 10px;
 }
 
 .move-up {
@@ -275,6 +275,33 @@ header {
     border: 1.5px solid #333333;
     border-radius: 20px;
     height: auto;
+}
+
+.text-and-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+}
+
+.download-container {
+    text-align: right;
+}
+
+.download {
+    width: auto;
+    padding: 10px;
+    background-color: #F7E4E4;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.download:hover {
+    transform: scale(1.025);
 }
 
 /* Image near the about me section */
@@ -931,7 +958,8 @@ opacity: 0;
 }
 
 .additional-text p {
-    margin: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
     }
 }
 
@@ -1075,6 +1103,18 @@ header {
     transform: scaleY(1.2) scaleX(1.05) translateY(2.5px);
 }
 
+.text-and-button-container {
+    flex-direction: column;
+}
+
+.download-container {
+    text-align: right;
+}
+
+.download {
+    margin-top: 10px;
+}
+
 .profile-photo2 {
     margin-top: 0%;
 }
@@ -1096,7 +1136,6 @@ header {
 .additional-text p {
     margin-right: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 }
