@@ -867,7 +867,7 @@ h1 {
 
 .section.content-block-1.right-container
 {
-    margin-top: -100%;
+    margin-top: -66%;
 }
 
 .image {
@@ -1172,7 +1172,7 @@ header {
 
 
 .section:nth-child(6) {
-    margin-bottom: 10%;
+    margin-bottom: 30%;
     max-width: 75%;
     margin-left: 7.5%;
 }
