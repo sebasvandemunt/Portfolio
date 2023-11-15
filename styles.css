@@ -185,7 +185,7 @@ header {
 }
 
 .section.content-block-1.right-container p,
-.section:nth-child(6) p
+.section:nth-child(7) p
 {
     margin-top: 10px;
 }
@@ -278,7 +278,6 @@ header {
     margin-left: 0px; 
     margin-right: 0px; 
     margin-top: -250px;
-    margin-bottom: 150px;
     padding: 20px;
     background-color: #9B7070;
     border: 1.5px solid #333333;
@@ -290,8 +289,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
-
 
 .text {
     flex: 1;
@@ -638,6 +635,10 @@ footer {
     animation: slideFromBottom 1s ease-in-out 2s forwards;
 }
 
+.section:nth-child(7) {
+    animation: slideFromBottom 1s ease-in-out 2s forwards;
+}
+
 .hidden-content {
     opacity: 0;
     transform: translateY(20px);
@@ -861,12 +862,12 @@ h1 {
 
 .content-block-1 {
     grid-column: 1;
+    margin-bottom: 66%;
 }
 
 .section.content-block-1.right-container
 {
-    margin-top: -50%;
-    margin-bottom: 50%;
+    margin-top: -100%;
 }
 
 .image {
@@ -888,25 +889,49 @@ h1 {
 }
 
 .section:nth-child(3) {
-    grid-column: span 2;
+    grid-column: span 1;
+    margin-top: 15%;
     margin-bottom: 30%;
+    margin-left: 33%;
+    max-width: 66%;
+    width: auto;
+}
+
+.text-container-skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line on smaller screens */
+}
+
+.skills-section {
+    width: 48%; /* Set the width of each skills section to take up half the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 20px; /* Add some margin between sections */
 }
 
 .section:nth-child(4) {
     grid-column: span 2;
     margin-bottom: 30%;
+    width: auto;
 }
 
 .section:nth-child(5) {
+    grid-column: span 2;
+    margin-bottom: 30%;
+    width: auto;
+}
+
+.section:nth-child(6) {
     grid-column: span 1;
     margin-bottom: 30%;
     width: auto;
     max-width: 66%;
 }
 
-.section:nth-child(6) {
+.section:nth-child(7) {
     grid-column: span 1;
-    margin-bottom: 0%;
+    margin-bottom: 30%;
+    width: auto;
 }
 
 .section {
@@ -1078,7 +1103,7 @@ header {
 .section.content-block-1.right-container
 {
     margin-top: 40%;
-    margin-bottom: 50%;
+    margin-bottom: 15%;
 }
 
 .image {
@@ -1140,7 +1165,19 @@ header {
     margin-top: 0%;
 }
 
-.section:nth-child(5) {
+.section:nth-child(3) {
+    max-width: 50%;
+    margin-left: 10%;
+}
+
+
+.section:nth-child(6) {
+    margin-bottom: 10%;
+    max-width: 75%;
+    margin-left: 7.5%;
+}
+
+.section:nth-child(7) {
     margin-bottom: 30%;
 }
 
