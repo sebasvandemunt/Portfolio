@@ -1,5 +1,3 @@
-// CODE BY SEBAS VAN DE MUNT //
-
 function openPopup(popupId) {
     var popup = document.getElementById('popup' + popupId);
     var overlay = popup.querySelector('.overlay');
@@ -65,6 +63,22 @@ function closePopup(popupId) {
             websiteContent[i].classList.remove('fadeContent');
         }
 
+        // Stop all video playback
+        var videoFrames = popup.querySelectorAll('.right-column iframe');
+        for (var i = 0; i < videoFrames.length; i++) {
+            var videoFrame = videoFrames[i];
+            var videoSrc = videoFrame.src;
+
+            // Check if the video is a YouTube video
+            if (videoSrc.includes('youtube.com')) {
+                // Extract the video ID
+                var videoId = videoSrc.match(/embed\/([^?]+)/)[1];
+
+                // Modify the video frame source to stop the playback
+                videoFrame.src = 'https://www.youtube.com/embed/' + videoId + '?si=0Nc8tHsBw5OF-lBu&autoplay=0';
+            }
+        }
+
         // Remove the event listener to prevent it from firing again
         popup.removeEventListener('animationend', animationEndHandler);
     };
@@ -72,7 +86,6 @@ function closePopup(popupId) {
     // Add the animationend event listener
     popup.addEventListener('animationend', animationEndHandler);
 }
-
 
 
 // Use window.onload to ensure the content is loaded before applying animations
@@ -211,5 +224,3 @@ function scrollToTop(event) {
         behavior: 'smooth',
     });
 }
-
-// CODE BY SEBAS VAN DE MUNT //

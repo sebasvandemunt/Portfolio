@@ -44,7 +44,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #FFF9F3;
+    background-color: #F7EBE7;
 }
 
 /* HEADER STYLES */
@@ -68,14 +68,14 @@ header {
 .logo.first-header-block {
     display: flex;
     align-items: center;
-    color: #7C5252;
+    color: #7A5752;
     border: 1.5px solid #333333;
     max-width: 100%;
 }
 
 .header-block {
     display: inline-block;
-    background-color: #F7E4E4;
+    background-color: #EDD4D1;
     border: 1px solid #333333;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -90,7 +90,7 @@ header {
 
 .first-header-block {
     display: inline-block;
-    background-color: #7C5252;
+    background-color: #7A5752;
     border-radius: 30px;
     padding: 10px;
     margin-bottom: 0px;
@@ -156,7 +156,7 @@ header {
 
 .container .heading-block {
     display: inline-flex;
-    background-color: #9B7070;
+    background-color: #997570;
     padding: 10px;
     max-width: fit-content;
     position: relative;
@@ -169,7 +169,7 @@ header {
 
 .section {
     padding: 20px;
-    background-color: #9B7070;
+    background-color: #997570;
     border-radius: 20px;
     position: relative;
 }
@@ -198,7 +198,7 @@ header {
 .heading-block {
     display: inline-flex;
     align-items: center;
-    background-color: #9B7070;
+    background-color: #997570;
     border-top: 1.5px solid #333333;
     border-radius: 20px;
     padding: 10px;
@@ -279,7 +279,7 @@ header {
     margin-right: 0px; 
     margin-top: -250px;
     padding: 20px;
-    background-color: #9B7070;
+    background-color: #997570;
     border: 1.5px solid #333333;
     border-radius: 20px;
     height: auto;
@@ -301,7 +301,7 @@ header {
 .download {
     width: auto;
     padding: 10px;
-    background-color: #F7E4E4;
+    background-color: #EDD4D1;
     border: 1px solid #333333;
     border-radius: 20px;
     transition: transform 0.3s ease;
@@ -460,7 +460,7 @@ header {
 }
 
 .popup-content {
-    background-color: #9B7070;
+    background-color: #997570;
     border: 1.5px solid #333333;
     border-radius: 20px;
     padding: 20px;
@@ -524,7 +524,7 @@ header {
 
 .content-scrollbox {
     overflow: auto;
-    background-color: #B79292;
+    background-color: #A08380;
     border-radius: 10px;
     padding: 10px;
 }
@@ -546,7 +546,7 @@ header {
     display: inline-block;
     width: auto;
     padding: 10px;
-    background-color: #F7E4E4;
+    background-color: #EDD4D1;
     border: 1px solid #333333;
     border-radius: 20px;
     transition: transform 0.3s ease;
@@ -601,7 +601,7 @@ header {
 
 /* Footer styles */
 footer {
-    background-color: #7C5252;
+    background-color: #7A5752;
     color: #FFF9F3;
     text-align: center;
     padding: 10px 0;
@@ -1171,7 +1171,7 @@ header {
 }
 
 .section:nth-child(6) {
-    margin-bottom: 15%;
+    margin-bottom: 30%;
     max-width: 75%;
     margin-left: 7.5%;
 }
